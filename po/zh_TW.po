@@ -1,22 +1,22 @@
 # Chinese translations for xz package.
 # This file is put in the public domain.
 #
-# pan93412 <pan93412@gmail.com>, 2019.
+# Yi-Jyun Pan <pan93412@gmail.com>, 2019, 2023
 msgid ""
 msgstr ""
-"Project-Id-Version: xz 5.2.4\n"
+"Project-Id-Version: xz 5.4.3\n"
 "Report-Msgid-Bugs-To: xz@tukaani.org\n"
-"POT-Creation-Date: 2023-01-11 19:01+0200\n"
-"PO-Revision-Date: 2019-04-23 22:00+0800\n"
-"Last-Translator: pan93412 <pan93412@gmail.com>\n"
-"Language-Team: Chinese (traditional) <zh-l10n@linux.org.tw>\n"
+"POT-Creation-Date: 2023-10-31 22:33+0800\n"
+"PO-Revision-Date: 2023-07-08 23:05+0800\n"
+"Last-Translator: Yi-Jyun Pan <pan93412@gmail.com>\n"
+"Language-Team: Chinese (traditional) <zh-l10n@lists.linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Bugs: Report translation errors to the Language-Team address.\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Bugs: Report translation errors to the Language-Team address.\n"
+"X-Generator: Poedit 3.3.2\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #: src/xz/args.c:77
@@ -47,87 +47,101 @@ msgstr "%s：不支援的完整性檢查類型"
 msgid "Only one file can be specified with `--files' or `--files0'."
 msgstr "「--files」或「--files0」只能指定一個檔案。"
 
-#: src/xz/args.c:586
+#. TRANSLATORS: This is a translatable
+#. string because French needs a space
+#. before the colon ("%s : %s").
+#: src/xz/args.c:533 src/xz/coder.c:692 src/xz/coder.c:708 src/xz/coder.c:968
+#: src/xz/coder.c:971 src/xz/file_io.c:605 src/xz/file_io.c:679
+#: src/xz/file_io.c:769 src/xz/file_io.c:940 src/xz/list.c:369
+#: src/xz/list.c:415 src/xz/list.c:477 src/xz/list.c:581 src/xz/list.c:590
+#, fuzzy, c-format
+#| msgid "%s: "
+msgid "%s: %s"
+msgstr "%s："
+
+#: src/xz/args.c:589
 #, c-format
 msgid "The environment variable %s contains too many arguments"
 msgstr "%s 環境變數包含過多參數"
 
-#: src/xz/args.c:688
+#: src/xz/args.c:691
 msgid "Compression support was disabled at build time"
 msgstr "已在編譯時停用壓縮支援"
 
-#: src/xz/args.c:695
+#: src/xz/args.c:698
 msgid "Decompression support was disabled at build time"
 msgstr "已在編譯時停用解壓縮支援"
 
-#: src/xz/args.c:701
+#: src/xz/args.c:704
 msgid "Compression of lzip files (.lz) is not supported"
-msgstr ""
+msgstr "不支援壓縮為 lzip 檔案 (.lz)"
+
+#: src/xz/args.c:735
+msgid "With --format=raw, --suffix=.SUF is required unless writing to stdout"
+msgstr "搭配 --format=raw 時，除非寫入標準輸出，否則需要傳入 --suffix=.SUF"
 
 #: src/xz/coder.c:115
 msgid "Maximum number of filters is four"
 msgstr "最多只能指定 4 個篩選器"
 
-#: src/xz/coder.c:134
+#: src/xz/coder.c:135
 msgid "Memory usage limit is too low for the given filter setup."
 msgstr "記憶體用量限制過低，不足以設定指定的篩選器。"
 
-#: src/xz/coder.c:169
+#: src/xz/coder.c:170
 msgid "Using a preset in raw mode is discouraged."
 msgstr "不建議在 Raw 模式使用設定檔。"
 
-#: src/xz/coder.c:171
+#: src/xz/coder.c:172
 msgid "The exact options of the presets may vary between software versions."
 msgstr "設定檔的選項可能因軟體版本而有異。"
 
-#: src/xz/coder.c:194
+#: src/xz/coder.c:195
 msgid "The .lzma format supports only the LZMA1 filter"
 msgstr ".lzma 格式僅支援 LZMA1 篩選器"
 
-#: src/xz/coder.c:202
+#: src/xz/coder.c:203
 msgid "LZMA1 cannot be used with the .xz format"
 msgstr "LZMA1 不能與 .xz 格式一同使用"
 
-#: src/xz/coder.c:219
+#: src/xz/coder.c:220
 msgid "The filter chain is incompatible with --flush-timeout"
 msgstr "篩選鏈不相容 --flush-timeout"
 
-#: src/xz/coder.c:225
+#: src/xz/coder.c:226
 msgid "Switching to single-threaded mode due to --flush-timeout"
 msgstr "因指定 --flush-timeout，因此切換到單執行緒模式"
 
-#: src/xz/coder.c:249
+#: src/xz/coder.c:250
 #, c-format
 msgid "Using up to %<PRIu32> threads."
 msgstr "使用最多 %<PRIu32> 個執行緒。"
 
-#: src/xz/coder.c:265
+#: src/xz/coder.c:266
 msgid "Unsupported filter chain or filter options"
 msgstr "不支援的篩選鏈或篩選器選項"
 
-#: src/xz/coder.c:277
+#: src/xz/coder.c:278
 #, c-format
 msgid "Decompression will need %s MiB of memory."
 msgstr "解壓縮將需要 %s MiB 的記憶體。"
 
-#: src/xz/coder.c:309
-#, fuzzy, c-format
-#| msgid "Adjusted the number of threads from %s to %s to not exceed the memory usage limit of %s MiB"
+#: src/xz/coder.c:310
+#, c-format
 msgid "Reduced the number of threads from %s to %s to not exceed the memory usage limit of %s MiB"
-msgstr "已將 %s 個執行緒調整至 %s，以不超過記憶體用量的 %s MiB 限制"
+msgstr "已將執行緒數量從 %s 個減少至 %s 個，以不超過記憶體用量的 %s MiB 限制"
 
-#: src/xz/coder.c:329
+#: src/xz/coder.c:330
 #, c-format
 msgid "Reduced the number of threads from %s to one. The automatic memory usage limit of %s MiB is still being exceeded. %s MiB of memory is required. Continuing anyway."
-msgstr ""
+msgstr "已將執行緒數量從 %s 減少至一個，但依然超出 %s MiB 的自動記憶體用量限制。需要 %s MiB 的記憶體。依然繼續執行。"
 
-#: src/xz/coder.c:356
-#, fuzzy, c-format
-#| msgid "Adjusted the number of threads from %s to %s to not exceed the memory usage limit of %s MiB"
+#: src/xz/coder.c:357
+#, c-format
 msgid "Switching to single-threaded mode to not exceed the memory usage limit of %s MiB"
-msgstr "已將 %s 個執行緒調整至 %s，以不超過記憶體用量的 %s MiB 限制"
+msgstr "正在切換至單執行緒模式，以免超出 %s MiB 的記憶體用量限制"
 
-#: src/xz/coder.c:411
+#: src/xz/coder.c:412
 #, c-format
 msgid "Adjusted LZMA%c dictionary size from %s MiB to %s MiB to not exceed the memory usage limit of %s MiB"
 msgstr "已將 LZMA%c 的字典大小從 %s MiB 調整至 %s MiB，以不超過記憶體用量的 %s MiB 限制"
@@ -137,11 +151,11 @@ msgstr "已將 LZMA%c 的字典大小從 %s MiB 調整至 %s MiB，以不超過�
 msgid "Error creating a pipe: %s"
 msgstr "建立管線時發生錯誤：%s"
 
-#: src/xz/file_io.c:235
+#: src/xz/file_io.c:252
 msgid "Failed to enable the sandbox"
 msgstr "無法啟用沙盒"
 
-#: src/xz/file_io.c:277
+#: src/xz/file_io.c:294
 #, c-format
 msgid "%s: poll() failed: %s"
 msgstr "%s：poll() 失敗：%s"
@@ -156,111 +170,111 @@ msgstr "%s：poll() 失敗：%s"
 #. it is possible that the user has put a new file in place
 #. of the original file, and in that case it obviously
 #. shouldn't be removed.
-#: src/xz/file_io.c:344
+#: src/xz/file_io.c:361
 #, c-format
 msgid "%s: File seems to have been moved, not removing"
 msgstr "%s：檔案似乎已經遷移，不移除"
 
-#: src/xz/file_io.c:351 src/xz/file_io.c:907
+#: src/xz/file_io.c:368 src/xz/file_io.c:924
 #, c-format
 msgid "%s: Cannot remove: %s"
 msgstr "%s：無法移除：%s"
 
-#: src/xz/file_io.c:377
+#: src/xz/file_io.c:394
 #, c-format
 msgid "%s: Cannot set the file owner: %s"
 msgstr "%s：無法設定檔案所有者：%s"
 
-#: src/xz/file_io.c:390
+#: src/xz/file_io.c:407
 #, c-format
 msgid "%s: Cannot set the file group: %s"
 msgstr "%s：無法設定檔案群組：%s"
 
-#: src/xz/file_io.c:409
+#: src/xz/file_io.c:426
 #, c-format
 msgid "%s: Cannot set the file permissions: %s"
 msgstr "%s：無法設定檔案權限：%s"
 
-#: src/xz/file_io.c:535
+#: src/xz/file_io.c:552
 #, c-format
 msgid "Error getting the file status flags from standard input: %s"
 msgstr "從標準輸入取得檔案狀態旗標時發生錯誤：%s"
 
-#: src/xz/file_io.c:593 src/xz/file_io.c:655
+#: src/xz/file_io.c:610 src/xz/file_io.c:672
 #, c-format
 msgid "%s: Is a symbolic link, skipping"
 msgstr "%s：是個符號連結，跳過"
 
-#: src/xz/file_io.c:684
+#: src/xz/file_io.c:701
 #, c-format
 msgid "%s: Is a directory, skipping"
 msgstr "%s：是個目錄，跳過"
 
-#: src/xz/file_io.c:690
+#: src/xz/file_io.c:707
 #, c-format
 msgid "%s: Not a regular file, skipping"
 msgstr "%s：不是一般檔案，跳過"
 
-#: src/xz/file_io.c:707
+#: src/xz/file_io.c:724
 #, c-format
 msgid "%s: File has setuid or setgid bit set, skipping"
 msgstr "%s：檔案已設定 setuid 或 setgid 位元，跳過"
 
-#: src/xz/file_io.c:714
+#: src/xz/file_io.c:731
 #, c-format
 msgid "%s: File has sticky bit set, skipping"
 msgstr "%s：檔案已設定黏性位元（sticky bit），跳過"
 
-#: src/xz/file_io.c:721
+#: src/xz/file_io.c:738
 #, c-format
 msgid "%s: Input file has more than one hard link, skipping"
 msgstr "%s：輸入檔有超過一個實際連結 (hard link)，跳過"
 
-#: src/xz/file_io.c:763
+#: src/xz/file_io.c:780
 msgid "Empty filename, skipping"
 msgstr "空檔名，跳過"
 
-#: src/xz/file_io.c:817
+#: src/xz/file_io.c:834
 #, c-format
 msgid "Error restoring the status flags to standard input: %s"
 msgstr "將狀態旗標還原到標準輸入時發生錯誤：%s"
 
-#: src/xz/file_io.c:865
+#: src/xz/file_io.c:882
 #, c-format
 msgid "Error getting the file status flags from standard output: %s"
 msgstr "從標準輸出取得檔案狀態旗標時發生錯誤：%s"
 
-#: src/xz/file_io.c:1043
+#: src/xz/file_io.c:1081
 #, c-format
 msgid "Error restoring the O_APPEND flag to standard output: %s"
 msgstr "將 O_APPEND 旗標還原到標準輸出時發生錯誤：%s"
 
-#: src/xz/file_io.c:1055
+#: src/xz/file_io.c:1093
 #, c-format
 msgid "%s: Closing the file failed: %s"
 msgstr "%s：關閉檔案失敗：%s"
 
-#: src/xz/file_io.c:1091 src/xz/file_io.c:1354
+#: src/xz/file_io.c:1129 src/xz/file_io.c:1391
 #, c-format
 msgid "%s: Seeking failed when trying to create a sparse file: %s"
 msgstr "%s：嘗試建立疏鬆檔案時發生搜尋失敗：%s"
 
-#: src/xz/file_io.c:1192
+#: src/xz/file_io.c:1229
 #, c-format
 msgid "%s: Read error: %s"
 msgstr "%s：讀取時發生錯誤：%s"
 
-#: src/xz/file_io.c:1222
+#: src/xz/file_io.c:1259
 #, c-format
 msgid "%s: Error seeking the file: %s"
 msgstr "%s：搜尋檔案時發生錯誤：%s"
 
-#: src/xz/file_io.c:1246
+#: src/xz/file_io.c:1283
 #, c-format
 msgid "%s: Unexpected end of file"
 msgstr "%s：非期望的檔案結尾"
 
-#: src/xz/file_io.c:1305
+#: src/xz/file_io.c:1342
 #, c-format
 msgid "%s: Write error: %s"
 msgstr "%s：寫入時發生錯誤：%s"
@@ -270,160 +284,140 @@ msgid "Disabled"
 msgstr "已停用"
 
 #: src/xz/hardware.c:269
-#, fuzzy
-#| msgid "Total amount of physical memory (RAM): "
 msgid "Amount of physical memory (RAM):"
-msgstr "實體記憶體 (RAM) 總量："
+msgstr "實體記憶體 (RAM) 數量："
 
 #: src/xz/hardware.c:270
 msgid "Number of processor threads:"
-msgstr ""
+msgstr "處理器執行緒的數量："
 
 #: src/xz/hardware.c:271
 msgid "Compression:"
-msgstr ""
+msgstr "壓縮："
 
 #: src/xz/hardware.c:272
 msgid "Decompression:"
-msgstr ""
+msgstr "解壓縮："
 
 #: src/xz/hardware.c:273
-#, fuzzy
-#| msgid "Memory usage limit for decompression:  "
 msgid "Multi-threaded decompression:"
-msgstr "解壓縮記憶體限制：     "
+msgstr "多執行緒解壓縮："
 
 #: src/xz/hardware.c:274
 msgid "Default for -T0:"
-msgstr ""
+msgstr "-T0 的預設值："
 
 #: src/xz/hardware.c:292
 msgid "Hardware information:"
-msgstr ""
+msgstr "硬體資訊："
 
 #: src/xz/hardware.c:299
-#, fuzzy
-#| msgid "Memory usage limit reached"
 msgid "Memory usage limits:"
-msgstr "達到記憶體用量上限"
+msgstr "記憶體用量上限："
 
 #: src/xz/list.c:68
 msgid "Streams:"
-msgstr ""
+msgstr "串流："
 
 #: src/xz/list.c:69
 msgid "Blocks:"
-msgstr ""
+msgstr "區塊："
 
 #: src/xz/list.c:70
-#, fuzzy
-#| msgid "  Compressed size:    %s\n"
 msgid "Compressed size:"
-msgstr "  壓縮大小：　　　　　　　%s\n"
+msgstr "壓縮後大小："
 
 #: src/xz/list.c:71
-#, fuzzy
-#| msgid "  Uncompressed size:  %s\n"
 msgid "Uncompressed size:"
-msgstr "  未壓縮大小：　　　　　　%s\n"
+msgstr "壓縮前大小："
 
 #: src/xz/list.c:72
 msgid "Ratio:"
-msgstr ""
+msgstr "壓縮比："
 
 #: src/xz/list.c:73
 msgid "Check:"
-msgstr ""
+msgstr "檢查："
 
 #: src/xz/list.c:74
-#, fuzzy
-#| msgid "  Stream padding:     %s\n"
 msgid "Stream Padding:"
-msgstr "  串流填充：　　　　　　　%s\n"
+msgstr "串流填充："
 
 #: src/xz/list.c:75
-#, fuzzy
-#| msgid "  Memory needed:      %s MiB\n"
 msgid "Memory needed:"
-msgstr "  所需記憶體量：　　　　　%s MiB\n"
+msgstr "所需記憶體："
 
 #: src/xz/list.c:76
-#, fuzzy
-#| msgid "  Sizes in headers:   %s\n"
 msgid "Sizes in headers:"
-msgstr "  檔頭中標示大小：　　　　%s\n"
+msgstr "檔頭中標示大小："
 
 #: src/xz/list.c:79
-#, fuzzy
-#| msgid "  Number of files:    %s\n"
 msgid "Number of files:"
-msgstr "  檔案數：　　　　　　　　%s\n"
+msgstr "檔案數："
 
 #: src/xz/list.c:122
 msgid "Stream"
-msgstr ""
+msgstr "串流"
 
 #: src/xz/list.c:123
 msgid "Block"
-msgstr ""
+msgstr "區塊"
 
 #: src/xz/list.c:124
 msgid "Blocks"
-msgstr ""
+msgstr "區塊"
 
 #: src/xz/list.c:125
 msgid "CompOffset"
-msgstr ""
+msgstr "壓縮偏移"
 
 #: src/xz/list.c:126
 msgid "UncompOffset"
-msgstr ""
+msgstr "未壓縮偏移"
 
 #: src/xz/list.c:127
 msgid "CompSize"
-msgstr ""
+msgstr "壓縮大小"
 
 #: src/xz/list.c:128
 msgid "UncompSize"
-msgstr ""
+msgstr "未壓縮大小"
 
 #: src/xz/list.c:129
-#, fuzzy
-#| msgid "Totals:"
 msgid "TotalSize"
-msgstr "總計："
+msgstr "總計大小"
 
 #: src/xz/list.c:130
 msgid "Ratio"
-msgstr ""
+msgstr "比率"
 
 #: src/xz/list.c:131
 msgid "Check"
-msgstr ""
+msgstr "檢查"
 
 #: src/xz/list.c:132
 msgid "CheckVal"
-msgstr ""
+msgstr "檢查值"
 
 #: src/xz/list.c:133
 msgid "Padding"
-msgstr ""
+msgstr "填充"
 
 #: src/xz/list.c:134
 msgid "Header"
-msgstr ""
+msgstr "檔頭"
 
 #: src/xz/list.c:135
 msgid "Flags"
-msgstr ""
+msgstr "旗標"
 
 #: src/xz/list.c:136
 msgid "MemUsage"
-msgstr ""
+msgstr "Mem用量"
 
 #: src/xz/list.c:137
 msgid "Filters"
-msgstr ""
+msgstr "篩選器"
 
 #. TRANSLATORS: Indicates that there is no integrity check.
 #. This string is used in tables. In older xz version this
@@ -499,40 +493,40 @@ msgstr "%s：因過小而不認為是個有效 .xz 檔"
 #. to Ratio, the columns are right aligned. Check and Filename
 #. are left aligned. If you need longer words, it's OK to
 #. use two lines here. Test with "xz -l foo.xz".
-#: src/xz/list.c:730
+#: src/xz/list.c:731
 msgid "Strms  Blocks   Compressed Uncompressed  Ratio  Check   Filename"
-msgstr " 串流　　區塊　　　 已壓縮　　　 未壓縮　 比例　檢驗碼　檔名"
+msgstr " 串流    區塊       已壓縮       未壓縮   比例  檢驗碼  檔名"
 
-#: src/xz/list.c:1025 src/xz/list.c:1203
+#: src/xz/list.c:1026 src/xz/list.c:1204
 msgid "Yes"
 msgstr "是"
 
-#: src/xz/list.c:1025 src/xz/list.c:1203
+#: src/xz/list.c:1026 src/xz/list.c:1204
 msgid "No"
 msgstr "否"
 
-#: src/xz/list.c:1027 src/xz/list.c:1205
+#: src/xz/list.c:1028 src/xz/list.c:1206
 #, c-format
 msgid "  Minimum XZ Utils version: %s\n"
-msgstr "  最小 XZ 工具程式版本：　%s\n"
+msgstr "  最小 XZ 工具程式版本: %s\n"
 
 #. TRANSLATORS: %s is an integer. Only the plural form of this
 #. message is used (e.g. "2 files"). Test with "xz -l foo.xz bar.xz".
-#: src/xz/list.c:1178
+#: src/xz/list.c:1179
 #, c-format
 msgid "%s file\n"
 msgid_plural "%s files\n"
 msgstr[0] "%s 個檔案\n"
 
-#: src/xz/list.c:1191
+#: src/xz/list.c:1192
 msgid "Totals:"
 msgstr "總計："
 
-#: src/xz/list.c:1269
+#: src/xz/list.c:1270
 msgid "--list works only on .xz files (--format=xz or --format=auto)"
 msgstr "--list 只能在 .xz 檔使用（--format=xz 或 --format=auto）"
 
-#: src/xz/list.c:1275
+#: src/xz/list.c:1276
 msgid "--list does not support reading from standard input"
 msgstr "--list 不支援從標準輸入讀取"
 
@@ -563,7 +557,7 @@ msgstr "從標準輸入讀取檔名時，無法從標準輸入讀取資料"
 #. of the line in messages. Usually it becomes "xz: ".
 #. This is a translatable string because French needs
 #. a space before a colon.
-#: src/xz/message.c:725
+#: src/xz/message.c:670 src/xz/message.c:725
 #, c-format
 msgid "%s: "
 msgstr "%s："
@@ -705,12 +699,6 @@ msgstr ""
 " 基本檔案格式與壓縮選項：\n"
 
 #: src/xz/message.c:1007
-#, fuzzy
-#| msgid ""
-#| "  -F, --format=FMT    file format to encode or decode; possible values are\n"
-#| "                      `auto' (default), `xz', `lzma', and `raw'\n"
-#| "  -C, --check=CHECK   integrity check type: `none' (use with caution),\n"
-#| "                      `crc32', `crc64' (default), or `sha256'"
 msgid ""
 "  -F, --format=FMT    file format to encode or decode; possible values are\n"
 "                      `auto' (default), `xz', `lzma', `lzip', and `raw'\n"
@@ -718,9 +706,9 @@ msgid ""
 "                      `crc32', `crc64' (default), or `sha256'"
 msgstr ""
 "  -F, --format=格式   用於編碼或解碼的檔案格式；可用的值有：\n"
-"                      「auto」（預設）、「xz」、「lzma」及「raw」\n"
-"  -C, --check=檢查碼   完整性檢查類型：「none」（請小心使用）、「crc32」、\n"
-"                      「crc64」（預設值）或「sha256」"
+"                      “auto”（預設）、“xz”、“lzma”、“lzip” 及 “raw”\n"
+"  -C, --check=檢查碼   完整性檢查類型：“none”（謹慎使用）、“crc32”、\n"
+"                      “crc64”（預設值）或“sha256”"
 
 #: src/xz/message.c:1012
 msgid "      --ignore-check  don't verify the integrity check when decompressing"
@@ -756,8 +744,8 @@ msgid ""
 "                      start a new .xz block after every SIZE bytes of input;\n"
 "                      use this to set the block size for threaded compression"
 msgstr ""
-"      --block-size=大小\n"
-"                      輸入每 <大小> 位元組後，開始一個新 .xz 區塊；\n"
+"      --block-size=SIZE\n"
+"                      輸入每 SIZE 位元組後，開始一個新 .xz 區塊；\n"
 "                      使用此功能以設定多執行緒壓縮的區塊大小"
 
 #: src/xz/message.c:1033
@@ -766,6 +754,9 @@ msgid ""
 "                      start a new .xz block after the given comma-separated\n"
 "                      intervals of uncompressed data"
 msgstr ""
+"      --block-list=SIZES\n"
+"                      在指定以逗號隔開的未壓縮資料間隔之後\n"
+"                      開始新的 .xz 區塊"
 
 #: src/xz/message.c:1037
 msgid ""
@@ -774,15 +765,12 @@ msgid ""
 "                      passed since the previous flush and reading more input\n"
 "                      would block, all pending data is flushed out"
 msgstr ""
+"      --flush-timeout=TIMEOUT\n"
+"                      壓縮時，倘若繼上次排清 (flush) 已經超過 TIMEOUT 毫秒\n"
+"                      而且讀入更多輸入會阻塞，則所有待排清的資料都將排清"
 
 #: src/xz/message.c:1043
-#, fuzzy, no-c-format
-#| msgid ""
-#| "      --memlimit-compress=LIMIT\n"
-#| "      --memlimit-decompress=LIMIT\n"
-#| "  -M, --memlimit=LIMIT\n"
-#| "                      set memory usage limit for compression, decompression,\n"
-#| "                      or both; LIMIT is in bytes, % of RAM, or 0 for defaults"
+#, no-c-format
 msgid ""
 "      --memlimit-compress=LIMIT\n"
 "      --memlimit-decompress=LIMIT\n"
@@ -792,11 +780,13 @@ msgid ""
 "                      threaded decompression, or all of these; LIMIT is in\n"
 "                      bytes, % of RAM, or 0 for defaults"
 msgstr ""
-"      --memlimit-compress=限制\n"
-"      --memlimit-decompress=限制\n"
-"  -M, --memlimit=限制\n"
-"                      限制壓縮、解壓縮或兩者的記憶體用量上限；\n"
-"                      <限制> 可以是位元組、記憶體百分比 (%)、或 0（預設值）"
+"      --memlimit-compress=LIMIT\n"
+"      --memlimit-decompress=LIMIT\n"
+"      --memlimit-mt-decompress=LIMIT\n"
+"  -M, --memlimit=LIMIT\n"
+"                      限制壓縮、解壓縮、多執行緒解壓縮或以上全部的記憶體\n"
+"                      用量上限。LIMIT 得是位元組、記憶體百分比 (%)，或 0\n"
+"                      (預設值)"
 
 #: src/xz/message.c:1052
 msgid ""
@@ -843,17 +833,6 @@ msgstr ""
 "                        depth=NUM  最大搜尋深度；0=自動（預設）"
 
 #: src/xz/message.c:1082
-#, fuzzy
-#| msgid ""
-#| "\n"
-#| "  --x86[=OPTS]        x86 BCJ filter (32-bit and 64-bit)\n"
-#| "  --powerpc[=OPTS]    PowerPC BCJ filter (big endian only)\n"
-#| "  --ia64[=OPTS]       IA-64 (Itanium) BCJ filter\n"
-#| "  --arm[=OPTS]        ARM BCJ filter (little endian only)\n"
-#| "  --armthumb[=OPTS]   ARM-Thumb BCJ filter (little endian only)\n"
-#| "  --sparc[=OPTS]      SPARC BCJ filter\n"
-#| "                      Valid OPTS for all BCJ filters:\n"
-#| "                        start=NUM  start offset for conversions (default=0)"
 msgid ""
 "\n"
 "  --x86[=OPTS]        x86 BCJ filter (32-bit and 64-bit)\n"
@@ -868,10 +847,11 @@ msgid ""
 msgstr ""
 "\n"
 "  --x86[=OPTS]        x86 BCJ 篩選器 (32 位元和 64 位元)\n"
+"  --arm[=OPTS]        ARM BCJ 篩選器\n"
+"  --armthumb[=OPTS]   ARM-Thumb BCJ 篩選器\n"
+"  --arm64[=OPTS]      ARM64 BCJ 篩選器\n"
 "  --powerpc[=OPTS]    PowerPC BCJ 篩選器（僅大端序）\n"
 "  --ia64[=OPTS]       IA-64 (Itanium) BCJ 篩選器\n"
-"  --arm[=OPTS]        ARM BCJ 篩選器（僅小端序）\n"
-"  --armthumb[=OPTS]   ARM-Thumb BCJ 篩選器（僅小端序）\n"
 "  --sparc[=OPTS]      SPARC BCJ 篩選器\n"
 "                      所有 BCJ 篩選器可用的 OPTS：\n"
 "                        start=NUM  轉換起始位移（預設值=0）"
@@ -883,6 +863,10 @@ msgid ""
 "                        dist=NUM   distance between bytes being subtracted\n"
 "                                   from each other (1-256; 1)"
 msgstr ""
+"\n"
+"  --delta[=OPTS]      增量篩選器 (有效值; 預設值)：\n"
+"                        dist=NUM   相減的位元組之間的距離\n"
+"                                   (1-256; 1)"
 
 #: src/xz/message.c:1103
 msgid ""
@@ -975,59 +959,54 @@ msgstr "%s：選項名稱無效"
 msgid "%s: Invalid option value"
 msgstr "%s：選項值無效"
 
-#: src/xz/options.c:247
+#: src/xz/options.c:248
 #, c-format
 msgid "Unsupported LZMA1/LZMA2 preset: %s"
 msgstr "不支援的 LZMA1/LZMA2 設定檔：%s"
 
-#: src/xz/options.c:355
+#: src/xz/options.c:356
 msgid "The sum of lc and lp must not exceed 4"
 msgstr "lc 和 lp 的總和不能超過 4"
 
-#: src/xz/suffix.c:137 src/xz/suffix.c:268
-#, c-format
-msgid "%s: With --format=raw, --suffix=.SUF is required unless writing to stdout"
-msgstr "%s：搭配 --format=raw 時，除非寫入標準輸出，否則需要 --suffix=.SUF"
-
-#: src/xz/suffix.c:168
+#: src/xz/suffix.c:160
 #, c-format
 msgid "%s: Filename has an unknown suffix, skipping"
 msgstr "%s：檔名有未知後綴，跳過"
 
-#: src/xz/suffix.c:189
+#: src/xz/suffix.c:181
 #, c-format
 msgid "%s: File already has `%s' suffix, skipping"
 msgstr "%s：檔案已有「%s」後綴，跳過"
 
-#: src/xz/suffix.c:405
+#: src/xz/suffix.c:388
 #, c-format
 msgid "%s: Invalid filename suffix"
 msgstr "%s：檔名後綴無效"
 
-#: src/xz/util.c:71
+#: src/xz/util.c:107
 #, c-format
 msgid "%s: Value is not a non-negative decimal integer"
 msgstr "%s：數值不是非負數十進位整數"
 
-#: src/xz/util.c:113
+#: src/xz/util.c:149
 #, c-format
 msgid "%s: Invalid multiplier suffix"
 msgstr "%s：乘數後綴無效"
 
-#: src/xz/util.c:115
+#: src/xz/util.c:151
 msgid "Valid suffixes are `KiB' (2^10), `MiB' (2^20), and `GiB' (2^30)."
 msgstr "有效的後綴有「KiB」(2^10)、「MiB」(2^20) 及「GiB」(2^30)。"
 
-#: src/xz/util.c:132
+#: src/xz/util.c:168
 #, c-format
 msgid "Value of the option `%s' must be in the range [%<PRIu64>, %<PRIu64>]"
 msgstr "選項「%s」的數值必須在 [%<PRIu64>, %<PRIu64>] 範圍內"
 
-#: src/xz/util.c:269
+#: src/xz/util.c:270
 msgid "Compressed data cannot be read from a terminal"
 msgstr "不能從終端機讀入已壓縮資料"
 
-#: src/xz/util.c:282
+#: src/xz/util.c:283
 msgid "Compressed data cannot be written to a terminal"
 msgstr "不能將已壓縮資料寫入終端機"
 
@@ -1048,19 +1027,15 @@ msgstr "未知錯誤"
 #~ msgid "Memory usage limit for compression:    "
 #~ msgstr "壓縮記憶體限制：       "
 
-#, c-format
 #~ msgid "  Streams:            %s\n"
 #~ msgstr "  串流：　　　　　　　　　%s\n"
 
-#, c-format
 #~ msgid "  Blocks:             %s\n"
 #~ msgstr "  區塊：　　　　　　　　　%s\n"
 
-#, c-format
 #~ msgid "  Ratio:              %s\n"
 #~ msgstr "  壓縮比：　　　　　　　　%s\n"
 
-#, c-format
 #~ msgid "  Check:              %s\n"
 #~ msgstr "  檢驗碼：　　　　　　　　%s\n"
 
@@ -1073,7 +1048,6 @@ msgstr "未知錯誤"
 #~ "    Stream    Blocks      CompOffset    UncompOffset        CompSize      UncompSize  Ratio  Check      Padding"
 
 # 下方的文字因排版有一些障礙，因此暫時不理他。
-#, c-format
 #~ msgid ""
 #~ "  Blocks:\n"
 #~ "    Stream     Block      CompOffset    UncompOffset       TotalSize      UncompSize  Ratio  Check"
@@ -1082,10 +1056,8 @@ msgstr "未知錯誤"
 #~ "    Stream     Block      CompOffset    UncompOffset       TotalSize      UncompSize  Ratio  Check"
 
 # 下方的文字因排版有一些障礙，因此暫時不理他。
-#, c-format
 #~ msgid "      CheckVal %*s Header  Flags        CompSize    MemUsage  Filters"
 #~ msgstr "      CheckVal %*s Header  Flags        CompSize    MemUsage  Filters"
 
-#, c-format
 #~ msgid "The selected match finder requires at least nice=%<PRIu32>"
 #~ msgstr "選取的符合搜尋工具需要至少 nice=%<PRIu32>"

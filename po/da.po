@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xz 5.2.4\n"
 "Report-Msgid-Bugs-To: xz@tukaani.org\n"
-"POT-Creation-Date: 2023-01-11 19:01+0200\n"
+"POT-Creation-Date: 2023-10-31 22:33+0800\n"
 "PO-Revision-Date: 2019-03-04 23:08+0100\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -45,87 +45,105 @@ msgstr "%s: Typen for integritetkontrol er ikke understøttet"
 msgid "Only one file can be specified with `--files' or `--files0'."
 msgstr "Kun en fil kan angives med »--files« eller »--files0«."
 
-#: src/xz/args.c:586
+#. TRANSLATORS: This is a translatable
+#. string because French needs a space
+#. before the colon ("%s : %s").
+#: src/xz/args.c:533 src/xz/coder.c:692 src/xz/coder.c:708 src/xz/coder.c:968
+#: src/xz/coder.c:971 src/xz/file_io.c:605 src/xz/file_io.c:679
+#: src/xz/file_io.c:769 src/xz/file_io.c:940 src/xz/list.c:369
+#: src/xz/list.c:415 src/xz/list.c:477 src/xz/list.c:581 src/xz/list.c:590
+#, fuzzy, c-format
+#| msgid "%s: "
+msgid "%s: %s"
+msgstr "%s: "
+
+#: src/xz/args.c:589
 #, c-format
 msgid "The environment variable %s contains too many arguments"
 msgstr "Miljøvariablen %s indeholder for mange argumenter"
 
-#: src/xz/args.c:688
+#: src/xz/args.c:691
 msgid "Compression support was disabled at build time"
 msgstr "Komprimeringsunderstøttelse blev deaktiveret på byggetidspunktet"
 
-#: src/xz/args.c:695
+#: src/xz/args.c:698
 msgid "Decompression support was disabled at build time"
 msgstr "Dekomprimeringsunderstøttelse blev deaktiveret på byggetidspunktet"
 
-#: src/xz/args.c:701
+#: src/xz/args.c:704
 msgid "Compression of lzip files (.lz) is not supported"
 msgstr ""
+
+#: src/xz/args.c:735
+#, fuzzy
+#| msgid "%s: With --format=raw, --suffix=.SUF is required unless writing to stdout"
+msgid "With --format=raw, --suffix=.SUF is required unless writing to stdout"
+msgstr "%s: med --format=raw, --suffix=.SUF er krævet med mindre der skrives til standardud"
 
 #: src/xz/coder.c:115
 msgid "Maximum number of filters is four"
 msgstr "Maksimalt antal filtre er fire"
 
-#: src/xz/coder.c:134
+#: src/xz/coder.c:135
 msgid "Memory usage limit is too low for the given filter setup."
 msgstr "Begræsningen for brug af hukommelse er for lav for den givne filteropsætning."
 
-#: src/xz/coder.c:169
+#: src/xz/coder.c:170
 msgid "Using a preset in raw mode is discouraged."
 msgstr "Det frarådes at bruge en forhåndskonfiguration i rå tilstand (raw mode)."
 
-#: src/xz/coder.c:171
+#: src/xz/coder.c:172
 msgid "The exact options of the presets may vary between software versions."
 msgstr "De præcise indstillinger for forhåndskonfigurationerne kan variere mellem programversioner."
 
-#: src/xz/coder.c:194
+#: src/xz/coder.c:195
 msgid "The .lzma format supports only the LZMA1 filter"
 msgstr "Formatet .lzma understøtter kun LZMA1-filteret"
 
-#: src/xz/coder.c:202
+#: src/xz/coder.c:203
 msgid "LZMA1 cannot be used with the .xz format"
 msgstr "LZMA1 kan ikke bruges med .xz-formatet"
 
-#: src/xz/coder.c:219
+#: src/xz/coder.c:220
 msgid "The filter chain is incompatible with --flush-timeout"
 msgstr "Filterkæden er ikke kompatibel med --flush-timeout"
 
-#: src/xz/coder.c:225
+#: src/xz/coder.c:226
 msgid "Switching to single-threaded mode due to --flush-timeout"
 msgstr "Skifter til enkelt trådet tilstand på grund af --flush-timeout"
 
-#: src/xz/coder.c:249
+#: src/xz/coder.c:250
 #, c-format
 msgid "Using up to %<PRIu32> threads."
 msgstr "Bruger op til %<PRIu32> tråde."
 
-#: src/xz/coder.c:265
+#: src/xz/coder.c:266
 msgid "Unsupported filter chain or filter options"
 msgstr "Filterkæde eller filterindstillinger er ikke understøttet"
 
-#: src/xz/coder.c:277
+#: src/xz/coder.c:278
 #, c-format
 msgid "Decompression will need %s MiB of memory."
 msgstr "Dekomprimering vil kræve %s MiB hukommelse."
 
-#: src/xz/coder.c:309
+#: src/xz/coder.c:310
 #, fuzzy, c-format
 #| msgid "Adjusted the number of threads from %s to %s to not exceed the memory usage limit of %s MiB"
 msgid "Reduced the number of threads from %s to %s to not exceed the memory usage limit of %s MiB"
 msgstr "Justerede antallet af tråde fra %s til %s for ikke at overskride begræsningen på brug af hukommelse på %s MiB"
 
-#: src/xz/coder.c:329
+#: src/xz/coder.c:330
 #, c-format
 msgid "Reduced the number of threads from %s to one. The automatic memory usage limit of %s MiB is still being exceeded. %s MiB of memory is required. Continuing anyway."
 msgstr ""
 
-#: src/xz/coder.c:356
+#: src/xz/coder.c:357
 #, fuzzy, c-format
 #| msgid "Adjusted the number of threads from %s to %s to not exceed the memory usage limit of %s MiB"
 msgid "Switching to single-threaded mode to not exceed the memory usage limit of %s MiB"
 msgstr "Justerede antallet af tråde fra %s til %s for ikke at overskride begræsningen på brug af hukommelse på %s MiB"
 
-#: src/xz/coder.c:411
+#: src/xz/coder.c:412
 #, c-format
 msgid "Adjusted LZMA%c dictionary size from %s MiB to %s MiB to not exceed the memory usage limit of %s MiB"
 msgstr "Justerede LZMA%c-ordbogsstørrelsen fra %s MiB til %s MiB for ikke at overskride begrænsningen på brug af hukommelse på %s MiB"
@@ -135,11 +153,11 @@ msgstr "Justerede LZMA%c-ordbogsstørrelsen fra %s MiB til %s MiB for ikke at ov
 msgid "Error creating a pipe: %s"
 msgstr "Det opstod en fejl under oprettelse af en datakanal: %s"
 
-#: src/xz/file_io.c:235
+#: src/xz/file_io.c:252
 msgid "Failed to enable the sandbox"
 msgstr "Kunne ikke aktivere sandkassen"
 
-#: src/xz/file_io.c:277
+#: src/xz/file_io.c:294
 #, c-format
 msgid "%s: poll() failed: %s"
 msgstr "%s: poll() mislykkedes: %s"
@@ -154,111 +172,111 @@ msgstr "%s: poll() mislykkedes: %s"
 #. it is possible that the user has put a new file in place
 #. of the original file, and in that case it obviously
 #. shouldn't be removed.
-#: src/xz/file_io.c:344
+#: src/xz/file_io.c:361
 #, c-format
 msgid "%s: File seems to have been moved, not removing"
 msgstr "%s: Filen er vist blevet flyttet, sletter ikke"
 
-#: src/xz/file_io.c:351 src/xz/file_io.c:907
+#: src/xz/file_io.c:368 src/xz/file_io.c:924
 #, c-format
 msgid "%s: Cannot remove: %s"
 msgstr "%s: Kan ikke fjerne: %s"
 
-#: src/xz/file_io.c:377
+#: src/xz/file_io.c:394
 #, c-format
 msgid "%s: Cannot set the file owner: %s"
 msgstr "%s: Kan ikke angive filejeren: %s"
 
-#: src/xz/file_io.c:390
+#: src/xz/file_io.c:407
 #, c-format
 msgid "%s: Cannot set the file group: %s"
 msgstr "%s: Kan ikke angive filgruppen: %s"
 
-#: src/xz/file_io.c:409
+#: src/xz/file_io.c:426
 #, c-format
 msgid "%s: Cannot set the file permissions: %s"
 msgstr "%s: Kan ikke angive filtilladelser: %s"
 
-#: src/xz/file_io.c:535
+#: src/xz/file_io.c:552
 #, c-format
 msgid "Error getting the file status flags from standard input: %s"
 msgstr "Der opstod en fejl under indhentelse af filstatusflag fra standardind: %s"
 
-#: src/xz/file_io.c:593 src/xz/file_io.c:655
+#: src/xz/file_io.c:610 src/xz/file_io.c:672
 #, c-format
 msgid "%s: Is a symbolic link, skipping"
 msgstr "%s: Er en symbolsk henvisning, udelader"
 
-#: src/xz/file_io.c:684
+#: src/xz/file_io.c:701
 #, c-format
 msgid "%s: Is a directory, skipping"
 msgstr "%s: Er en mappe, udelader"
 
-#: src/xz/file_io.c:690
+#: src/xz/file_io.c:707
 #, c-format
 msgid "%s: Not a regular file, skipping"
 msgstr "%s: Er ikke en normal fil, udelader"
 
-#: src/xz/file_io.c:707
+#: src/xz/file_io.c:724
 #, c-format
 msgid "%s: File has setuid or setgid bit set, skipping"
 msgstr "%s: Filen har setuid- eller setgid-bitsæt, udelader"
 
-#: src/xz/file_io.c:714
+#: src/xz/file_io.c:731
 #, c-format
 msgid "%s: File has sticky bit set, skipping"
 msgstr "%s: Fil har klæbende bitsæt, udelader"
 
-#: src/xz/file_io.c:721
+#: src/xz/file_io.c:738
 #, c-format
 msgid "%s: Input file has more than one hard link, skipping"
 msgstr "%s: Inddatafil har mere end en hård henvisning, udelader"
 
-#: src/xz/file_io.c:763
+#: src/xz/file_io.c:780
 msgid "Empty filename, skipping"
 msgstr "Tomt filnavn, udelader"
 
-#: src/xz/file_io.c:817
+#: src/xz/file_io.c:834
 #, c-format
 msgid "Error restoring the status flags to standard input: %s"
 msgstr "Der opstod en fejl under gendannelse af statusflagene til standardind: %s"
 
-#: src/xz/file_io.c:865
+#: src/xz/file_io.c:882
 #, c-format
 msgid "Error getting the file status flags from standard output: %s"
 msgstr "Der opstod en fejl under indhentelse af filstatusflag fra standardud: %s"
 
-#: src/xz/file_io.c:1043
+#: src/xz/file_io.c:1081
 #, c-format
 msgid "Error restoring the O_APPEND flag to standard output: %s"
 msgstr "Der opstod en fejl under gendannelse af flaget O_APPEND til standardud: %s"
 
-#: src/xz/file_io.c:1055
+#: src/xz/file_io.c:1093
 #, c-format
 msgid "%s: Closing the file failed: %s"
 msgstr "%s: Lukning af filen fejlede: %s"
 
-#: src/xz/file_io.c:1091 src/xz/file_io.c:1354
+#: src/xz/file_io.c:1129 src/xz/file_io.c:1391
 #, c-format
 msgid "%s: Seeking failed when trying to create a sparse file: %s"
 msgstr "%s: Søgning fejlede under forsøg på at oprette en tynd fil: %s"
 
-#: src/xz/file_io.c:1192
+#: src/xz/file_io.c:1229
 #, c-format
 msgid "%s: Read error: %s"
 msgstr "%s: Læsefejl: %s"
 
-#: src/xz/file_io.c:1222
+#: src/xz/file_io.c:1259
 #, c-format
 msgid "%s: Error seeking the file: %s"
 msgstr "%s: Der opstod en fejl under søgning efter filen: %s"
 
-#: src/xz/file_io.c:1246
+#: src/xz/file_io.c:1283
 #, c-format
 msgid "%s: Unexpected end of file"
 msgstr "%s: Uventet filafslutning"
 
-#: src/xz/file_io.c:1305
+#: src/xz/file_io.c:1342
 #, c-format
 msgid "%s: Write error: %s"
 msgstr "%s: Skrivefejl: %s"
@@ -497,41 +515,41 @@ msgstr "%s: For lille til at være en gyldig .xz-fil"
 #. to Ratio, the columns are right aligned. Check and Filename
 #. are left aligned. If you need longer words, it's OK to
 #. use two lines here. Test with "xz -l foo.xz".
-#: src/xz/list.c:730
+#: src/xz/list.c:731
 msgid "Strms  Blocks   Compressed Uncompressed  Ratio  Check   Filename"
 msgstr ""
 
-#: src/xz/list.c:1025 src/xz/list.c:1203
+#: src/xz/list.c:1026 src/xz/list.c:1204
 msgid "Yes"
 msgstr "Ja"
 
-#: src/xz/list.c:1025 src/xz/list.c:1203
+#: src/xz/list.c:1026 src/xz/list.c:1204
 msgid "No"
 msgstr "Nej"
 
-#: src/xz/list.c:1027 src/xz/list.c:1205
+#: src/xz/list.c:1028 src/xz/list.c:1206
 #, c-format
 msgid "  Minimum XZ Utils version: %s\n"
 msgstr "  Minimum for XZ Utils-version: %s\n"
 
 #. TRANSLATORS: %s is an integer. Only the plural form of this
 #. message is used (e.g. "2 files"). Test with "xz -l foo.xz bar.xz".
-#: src/xz/list.c:1178
+#: src/xz/list.c:1179
 #, c-format
 msgid "%s file\n"
 msgid_plural "%s files\n"
 msgstr[0] "%s fil\n"
 msgstr[1] "%s filer\n"
 
-#: src/xz/list.c:1191
+#: src/xz/list.c:1192
 msgid "Totals:"
 msgstr "I alt:"
 
-#: src/xz/list.c:1269
+#: src/xz/list.c:1270
 msgid "--list works only on .xz files (--format=xz or --format=auto)"
 msgstr ""
 
-#: src/xz/list.c:1275
+#: src/xz/list.c:1276
 msgid "--list does not support reading from standard input"
 msgstr "--list understøtter ikke læsning fra standardind"
 
@@ -562,7 +580,7 @@ msgstr ""
 #. of the line in messages. Usually it becomes "xz: ".
 #. This is a translatable string because French needs
 #. a space before a colon.
-#: src/xz/message.c:725
+#: src/xz/message.c:670 src/xz/message.c:725
 #, c-format
 msgid "%s: "
 msgstr "%s: "
@@ -895,59 +913,54 @@ msgstr "%s: Ugyldigt tilvalgsnavn"
 msgid "%s: Invalid option value"
 msgstr "%s: Ugyldigt tilvalgsværdi"
 
-#: src/xz/options.c:247
+#: src/xz/options.c:248
 #, c-format
 msgid "Unsupported LZMA1/LZMA2 preset: %s"
 msgstr "LZMA1/LZMA2-forhåndskonfiguration er ikke understøttet: %s"
 
-#: src/xz/options.c:355
+#: src/xz/options.c:356
 msgid "The sum of lc and lp must not exceed 4"
 msgstr "Summen af lc og lp må ikke være højere end 4"
 
-#: src/xz/suffix.c:137 src/xz/suffix.c:268
-#, c-format
-msgid "%s: With --format=raw, --suffix=.SUF is required unless writing to stdout"
-msgstr "%s: med --format=raw, --suffix=.SUF er krævet med mindre der skrives til standardud"
-
-#: src/xz/suffix.c:168
+#: src/xz/suffix.c:160
 #, c-format
 msgid "%s: Filename has an unknown suffix, skipping"
 msgstr "%s: Filnavn har ukendt endelse, udelader"
 
-#: src/xz/suffix.c:189
+#: src/xz/suffix.c:181
 #, c-format
 msgid "%s: File already has `%s' suffix, skipping"
 msgstr "%s: Filen har allrede endelsen »%s«, udelader."
 
-#: src/xz/suffix.c:405
+#: src/xz/suffix.c:388
 #, c-format
 msgid "%s: Invalid filename suffix"
 msgstr "%s: Ugyldig filnavnendelse"
 
-#: src/xz/util.c:71
+#: src/xz/util.c:107
 #, c-format
 msgid "%s: Value is not a non-negative decimal integer"
 msgstr "%s: Værdi er ikke et positivt decimalheltal"
 
-#: src/xz/util.c:113
+#: src/xz/util.c:149
 #, c-format
 msgid "%s: Invalid multiplier suffix"
 msgstr "%s: Ugyldig multiplikatorendelse"
 
-#: src/xz/util.c:115
+#: src/xz/util.c:151
 msgid "Valid suffixes are `KiB' (2^10), `MiB' (2^20), and `GiB' (2^30)."
 msgstr "Gyldige endelser er »KiB« (2^10), »MiB« (2^20) og »GiB« (2^30)."
 
-#: src/xz/util.c:132
+#: src/xz/util.c:168
 #, c-format
 msgid "Value of the option `%s' must be in the range [%<PRIu64>, %<PRIu64>]"
 msgstr "Værdien for tilvalget »%s« skal være i intervallet [%<PRIu64>, %<PRIu64>]"
 
-#: src/xz/util.c:269
+#: src/xz/util.c:270
 msgid "Compressed data cannot be read from a terminal"
 msgstr "Komprimerede data kan ikke læses fra en terminal"
 
-#: src/xz/util.c:282
+#: src/xz/util.c:283
 msgid "Compressed data cannot be written to a terminal"
 msgstr "Komprimerede data kan ikke skrives til en terminal"
 

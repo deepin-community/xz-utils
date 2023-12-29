@@ -630,8 +630,6 @@ OPTIONS
               limit.   Setting limit to 0 resets the limit to the default sys-
               tem-specific value.
 
-
-
        -M limit, --memlimit=limit, --memory=limit
               This  is  equivalent  to  specifying   --memlimit-compress=limit
               --memlimit-decompress=limit --memlimit-mt-decompress=limit.
@@ -1081,8 +1079,8 @@ ROBOT MODE
        will be supported for compression and decompression in the future.
 
    Version
-       xz --robot --version will print the version number of xz and liblzma in
-       the following format:
+       xz --robot --version prints the version number of xz and liblzma in the
+       following format:
 
        XZ_VERSION=XYYYZZZS
        LIBLZMA_VERSION=XYYYZZZS
@@ -1104,8 +1102,8 @@ ROBOT MODE
        Examples: 4.999.9beta is 49990091 and 5.0.0 is 50000002.
 
    Memory limit information
-       xz  --robot --info-memory prints a single line with three tab-separated
-       columns:
+       xz  --robot  --info-memory prints a single line with multiple tab-sepa-
+       rated columns:
 
        1.  Total amount of physical memory (RAM) in bytes.
 
@@ -1491,7 +1489,6 @@ EXAMPLES
 
               Preset   CompCPU
                -0         0
-
                -1         1
                -2         2
                -3         3
@@ -1582,8 +1579,8 @@ SEE ALSO
 
        XZ Utils: <https://tukaani.org/xz/>
        XZ Embedded: <https://tukaani.org/xz/embedded.html>
-       LZMA SDK: <http://7-zip.org/sdk.html>
+       LZMA SDK: <https://7-zip.org/sdk.html>
 
 
 
-Tukaani                           2022-12-01                             XZ(1)
+Tukaani                           2023-07-17                             XZ(1)

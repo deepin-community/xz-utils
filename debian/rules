@@ -4,10 +4,8 @@ export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 %:
 	dh $@ $(opt_no_act)
 
-override_dh_autoreconf:
-	./autogen.sh
-
 override_dh_auto_clean:
+	if [ -f doc/api.backup.done ]; then rm -rf doc/api; mv doc/api.backup doc/api; rm doc/api.backup.done; else rm -rf doc/api.backup*; fi
 	dh_auto_clean --builddirectory debian/xzdec-build
 	dh_auto_clean --builddirectory debian/normal-build
 	dh_auto_clean --builddirectory debian/static-build
@@ -18,20 +16,15 @@ override_dh_auto_install-arch:
 	dh_auto_install --builddirectory debian/xzdec-build
 	dh_auto_install --builddirectory debian/normal-build
 	dh_auto_install --builddirectory debian/static-build
-	set -e; arch=$$(dpkg-architecture -qDEB_HOST_MULTIARCH); \
-	install -d debian/tmp/lib/$$arch; \
-	mv debian/tmp/usr/lib/$$arch/liblzma.so.* debian/tmp/lib/$$arch/; \
-	dso=$$(basename $$(readlink debian/tmp/usr/lib/$$arch/liblzma.so)); \
-	ln -s -f /lib/$$arch/$$dso debian/tmp/usr/lib/$$arch/liblzma.so
 
 override_dh_installchangelogs:
 	dh_installchangelogs ChangeLog
 
 override_dh_auto_build-indep:
-	cd debian/normal-build && doxygen Doxyfile
+	if [ ! -d doc/api.backup ]; then cp --reflink=auto -ra doc/api doc/api.backup; touch doc/api.backup.done; fi
+	cd doxygen && sh update-doxygen
 
 override_dh_auto_build-arch:
-	$(MAKE) -C debian/normal-build/po update-gmo
 	dh_auto_build --builddirectory debian/normal-build
 	dh_auto_build --builddirectory debian/static-build
 	# The xzdec binary/ package is built with -Os as suggested in PACKAGERS
@@ -75,7 +68,7 @@ override_dh_auto_configure:
 
 small_flags_env =
 small_flags_env += DEB_CFLAGS_MAINT_STRIP='-O2 -O3'
-small_flags_env += DEB_CFLAGS_MAINT_PREPEND=-Os -D_BLHC_IGNORE_THIS_LINE
+small_flags_env += DEB_CFLAGS_MAINT_PREPEND='-Os -D_BLHC_IGNORE_THIS_LINE'
 flags_cmd = dpkg-buildflags --export=configure
 opt_optimize = $(shell $(flags_cmd))
 opt_optimize_small = $(shell $(small_flags_env) $(flags_cmd))
@@ -90,10 +83,6 @@ ifeq (hurd,$(shell dpkg-architecture -qDEB_HOST_ARCH_OS))
     ifeq (i386,$(cputype))
         opt_optimize += --enable-assembler=x86
         opt_optimize_small += --enable-assembler=x86
-    endif
-    ifeq (amd64,$(cputype))
-        opt_optimize += --enable-assembler=x86_64
-        opt_optimize_small += --enable-assembler=x86_64
     endif
 endif
 
@@ -110,6 +99,9 @@ ifneq (,$(filter quiet,$(DEB_BUILD_OPTIONS)))
     opt_quiet = --quiet
     MAKEFLAGS += --quiet
 endif
+
+override_dh_makeshlibs:
+	dh_makeshlibs --add-udeb=liblzma5-udeb
 
 # Build a tarball with the latest upstream version.
 # This is made complicated by the need to choose a nice version number.

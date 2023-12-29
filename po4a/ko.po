@@ -4,33 +4,33 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xz-man 5.4.0-pre2\n"
-"POT-Creation-Date: 2023-01-03 20:53+0800\n"
-"PO-Revision-Date: 2023-01-01 22:37+0900\n"
+"Project-Id-Version: xz-man 5.4.4-pre1\n"
+"POT-Creation-Date: 2023-11-01 20:27+0800\n"
+"PO-Revision-Date: 2023-07-20 11:01+0900\n"
 "Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
 "Language-Team: Korean <translation-team-ko@googlegroups.com>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Bugs: Report translation errors to the Language-Team address.\n"
-"X-Generator: Poedit 2.3.1\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Bugs: Report translation errors to the Language-Team address.\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #. type: TH
-#: ../src/xz/xz.1:8
+#: ../src/xz/xz.1:9
 #, no-wrap
 msgid "XZ"
 msgstr "XZ"
 
 #. type: TH
-#: ../src/xz/xz.1:8
+#: ../src/xz/xz.1:9
 #, no-wrap
-msgid "2022-12-01"
-msgstr "2022-12-01"
+msgid "2023-07-17"
+msgstr "2023-07-17"
 
 #. type: TH
-#: ../src/xz/xz.1:8 ../src/xzdec/xzdec.1:7 ../src/lzmainfo/lzmainfo.1:7
+#: ../src/xz/xz.1:9 ../src/xzdec/xzdec.1:7 ../src/lzmainfo/lzmainfo.1:7
 #: ../src/scripts/xzdiff.1:9 ../src/scripts/xzgrep.1:9
 #: ../src/scripts/xzless.1:10 ../src/scripts/xzmore.1:7
 #, no-wrap
@@ -38,7 +38,7 @@ msgid "Tukaani"
 msgstr "Tukaani"
 
 #. type: TH
-#: ../src/xz/xz.1:8 ../src/xzdec/xzdec.1:7 ../src/lzmainfo/lzmainfo.1:7
+#: ../src/xz/xz.1:9 ../src/xzdec/xzdec.1:7 ../src/lzmainfo/lzmainfo.1:7
 #: ../src/scripts/xzdiff.1:9 ../src/scripts/xzgrep.1:9
 #: ../src/scripts/xzless.1:10 ../src/scripts/xzmore.1:7
 #, no-wrap
@@ -46,7 +46,7 @@ msgid "XZ Utils"
 msgstr "XZ 유틸리티"
 
 #. type: SH
-#: ../src/xz/xz.1:10 ../src/xzdec/xzdec.1:8 ../src/lzmainfo/lzmainfo.1:8
+#: ../src/xz/xz.1:11 ../src/xzdec/xzdec.1:8 ../src/lzmainfo/lzmainfo.1:8
 #: ../src/scripts/xzdiff.1:10 ../src/scripts/xzgrep.1:10
 #: ../src/scripts/xzless.1:11 ../src/scripts/xzmore.1:8
 #, no-wrap
@@ -54,7 +54,7 @@ msgid "NAME"
 msgstr "이름"
 
 #. type: Plain text
-#: ../src/xz/xz.1:12
+#: ../src/xz/xz.1:13
 msgid ""
 "xz, unxz, xzcat, lzma, unlzma, lzcat - Compress or decompress .xz and .lzma "
 "files"
@@ -63,7 +63,7 @@ msgstr ""
 "축 해제합니다"
 
 #. type: SH
-#: ../src/xz/xz.1:13 ../src/xzdec/xzdec.1:10 ../src/lzmainfo/lzmainfo.1:10
+#: ../src/xz/xz.1:14 ../src/xzdec/xzdec.1:10 ../src/lzmainfo/lzmainfo.1:10
 #: ../src/scripts/xzdiff.1:12 ../src/scripts/xzgrep.1:12
 #: ../src/scripts/xzless.1:13 ../src/scripts/xzmore.1:10
 #, no-wrap
@@ -71,44 +71,44 @@ msgid "SYNOPSIS"
 msgstr "요약"
 
 #. type: Plain text
-#: ../src/xz/xz.1:17
+#: ../src/xz/xz.1:18
 msgid "B<xz> [I<option...>] [I<file...>]"
 msgstr "B<xz> [I<<옵션>...>] [I<E<lt>파일E<gt>...>]"
 
 #. type: SH
-#: ../src/xz/xz.1:18
+#: ../src/xz/xz.1:19
 #, no-wrap
 msgid "COMMAND ALIASES"
 msgstr "명령 별칭"
 
 #. type: Plain text
-#: ../src/xz/xz.1:22
+#: ../src/xz/xz.1:23
 msgid "B<unxz> is equivalent to B<xz --decompress>."
 msgstr "B<unxz> 명령은 B<xz --decompress> 명령과 동일합니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:26
+#: ../src/xz/xz.1:27
 msgid "B<xzcat> is equivalent to B<xz --decompress --stdout>."
 msgstr "B<xzcat> 명령은 B<xz --decompress --stdout> 명령과 동일합니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:30
+#: ../src/xz/xz.1:31
 msgid "B<lzma> is equivalent to B<xz --format=lzma>."
 msgstr "B<lzma> 명령은 B<xz --format=lzma> 명령과 동일합니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:34
+#: ../src/xz/xz.1:35
 msgid "B<unlzma> is equivalent to B<xz --format=lzma --decompress>."
 msgstr "B<unlzma> 명령은 B<xz --format=lzma --decompress> 명령과 동일합니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:38
+#: ../src/xz/xz.1:39
 msgid "B<lzcat> is equivalent to B<xz --format=lzma --decompress --stdout>."
 msgstr ""
 "B<lzcat> 명령은 B<xz --format=lzma --decompress --stdout> 명령과 동일합니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:50
+#: ../src/xz/xz.1:51
 msgid ""
 "When writing scripts that need to decompress files, it is recommended to "
 "always use the name B<xz> with appropriate arguments (B<xz -d> or B<xz -"
@@ -119,7 +119,7 @@ msgstr ""
 "다."
 
 #. type: SH
-#: ../src/xz/xz.1:51 ../src/xzdec/xzdec.1:18 ../src/lzmainfo/lzmainfo.1:15
+#: ../src/xz/xz.1:52 ../src/xzdec/xzdec.1:18 ../src/lzmainfo/lzmainfo.1:15
 #: ../src/scripts/xzdiff.1:24 ../src/scripts/xzgrep.1:33
 #: ../src/scripts/xzless.1:19 ../src/scripts/xzmore.1:16
 #, no-wrap
@@ -127,7 +127,7 @@ msgid "DESCRIPTION"
 msgstr "설명"
 
 #. type: Plain text
-#: ../src/xz/xz.1:70
+#: ../src/xz/xz.1:71
 msgid ""
 "B<xz> is a general-purpose data compression tool with command line syntax "
 "similar to B<gzip>(1)  and B<bzip2>(1).  The native file format is the B<."
@@ -141,7 +141,7 @@ msgstr ""
 "가, B<lzip>에서 활용하는 B<.lz> 형식 압축 해제도 지원합니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:92
+#: ../src/xz/xz.1:93
 msgid ""
 "B<xz> compresses or decompresses each I<file> according to the selected "
 "operation mode.  If no I<files> are given or I<file> is B<->, B<xz> reads "
@@ -158,7 +158,7 @@ msgstr ""
 "를 터미널에서 실행하면 표준 입력의 압축 데이터 읽기를 거절합니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:102
+#: ../src/xz/xz.1:103
 msgid ""
 "Unless B<--stdout> is specified, I<files> other than B<-> are written to a "
 "new file whose name is derived from the source I<file> name:"
@@ -167,11 +167,11 @@ msgstr ""
 "파일E<gt>> 이름에서 가져온 새 파일 이름으로 기록합니다:"
 
 #. type: IP
-#: ../src/xz/xz.1:102 ../src/xz/xz.1:108 ../src/xz/xz.1:133 ../src/xz/xz.1:138
-#: ../src/xz/xz.1:141 ../src/xz/xz.1:144 ../src/xz/xz.1:160 ../src/xz/xz.1:421
-#: ../src/xz/xz.1:424 ../src/xz/xz.1:431 ../src/xz/xz.1:676 ../src/xz/xz.1:678
-#: ../src/xz/xz.1:777 ../src/xz/xz.1:788 ../src/xz/xz.1:797 ../src/xz/xz.1:805
-#: ../src/xz/xz.1:1033 ../src/xz/xz.1:1042 ../src/xz/xz.1:1054
+#: ../src/xz/xz.1:103 ../src/xz/xz.1:109 ../src/xz/xz.1:134 ../src/xz/xz.1:139
+#: ../src/xz/xz.1:142 ../src/xz/xz.1:145 ../src/xz/xz.1:161 ../src/xz/xz.1:422
+#: ../src/xz/xz.1:425 ../src/xz/xz.1:432 ../src/xz/xz.1:677 ../src/xz/xz.1:679
+#: ../src/xz/xz.1:778 ../src/xz/xz.1:789 ../src/xz/xz.1:798 ../src/xz/xz.1:806
+#: ../src/xz/xz.1:1034 ../src/xz/xz.1:1043 ../src/xz/xz.1:1055
 #: ../src/xz/xz.1:1729 ../src/xz/xz.1:1735 ../src/xz/xz.1:1853
 #: ../src/xz/xz.1:1857 ../src/xz/xz.1:1860 ../src/xz/xz.1:1863
 #: ../src/xz/xz.1:1867 ../src/xz/xz.1:1874 ../src/xz/xz.1:1876
@@ -180,7 +180,7 @@ msgid "\\(bu"
 msgstr "\\(bu"
 
 #. type: Plain text
-#: ../src/xz/xz.1:108
+#: ../src/xz/xz.1:109
 msgid ""
 "When compressing, the suffix of the target file format (B<.xz> or B<.lzma>)  "
 "is appended to the source filename to get the target filename."
@@ -189,7 +189,7 @@ msgstr ""
 "에 붙어 대상 파일이름이 됩니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:123
+#: ../src/xz/xz.1:124
 msgid ""
 "When decompressing, the B<.xz>, B<.lzma>, or B<.lz> suffix is removed from "
 "the filename to get the target filename.  B<xz> also recognizes the suffixes "
@@ -200,7 +200,7 @@ msgstr ""
 "B<.tar> 접미사로 치환합니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:127
+#: ../src/xz/xz.1:128
 msgid ""
 "If the target file already exists, an error is displayed and the I<file> is "
 "skipped."
@@ -208,7 +208,7 @@ msgstr ""
 "대상 파일이 이미 있으면, 오류를 나타내고 I<E<lt>파일E<gt>>을 건너뜁니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:133
+#: ../src/xz/xz.1:134
 msgid ""
 "Unless writing to standard output, B<xz> will display a warning and skip the "
 "I<file> if any of the following applies:"
@@ -217,7 +217,7 @@ msgstr ""
 "우 I<E<lt>파일E<gt>>을 건너뜁니다:"
 
 #. type: Plain text
-#: ../src/xz/xz.1:138
+#: ../src/xz/xz.1:139
 msgid ""
 "I<File> is not a regular file.  Symbolic links are not followed, and thus "
 "they are not considered to be regular files."
@@ -226,17 +226,17 @@ msgstr ""
 "반 파일로 간주하지 않습니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:141
+#: ../src/xz/xz.1:142
 msgid "I<File> has more than one hard link."
 msgstr "I<E<lt>파일E<gt>>이 하나 이상의 하드 링크일 떄."
 
 #. type: Plain text
-#: ../src/xz/xz.1:144
+#: ../src/xz/xz.1:145
 msgid "I<File> has setuid, setgid, or sticky bit set."
 msgstr "I<E<lt>파일E<gt>>에 setuid, setgid, 끈적이 비트 집합이 붙어있을 떄."
 
 #. type: Plain text
-#: ../src/xz/xz.1:160
+#: ../src/xz/xz.1:161
 msgid ""
 "The operation mode is set to compress and the I<file> already has a suffix "
 "of the target file format (B<.xz> or B<.txz> when compressing to the B<.xz> "
@@ -247,7 +247,7 @@ msgstr ""
 "로 압축하면 B<.lzma> 또는 B<.tlz>)."
 
 #. type: Plain text
-#: ../src/xz/xz.1:170
+#: ../src/xz/xz.1:171
 msgid ""
 "The operation mode is set to decompress and the I<file> doesn't have a "
 "suffix of any of the supported file formats (B<.xz>, B<.txz>, B<.lzma>, B<."
@@ -257,7 +257,7 @@ msgstr ""
 "(B<.xz>, B<.txz>, B<.lzma>, B<.tlz>, B<.lz>)를 붙이지 않았을 때."
 
 #. type: Plain text
-#: ../src/xz/xz.1:185
+#: ../src/xz/xz.1:186
 msgid ""
 "After successfully compressing or decompressing the I<file>, B<xz> copies "
 "the owner, group, permissions, access time, and modification time from the "
@@ -275,7 +275,7 @@ msgstr ""
 "하는 기능은 지원하지 않습니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:195
+#: ../src/xz/xz.1:196
 msgid ""
 "Once the target file has been successfully closed, the source I<file> is "
 "removed unless B<--keep> was specified.  The source I<file> is never removed "
@@ -286,7 +286,7 @@ msgstr ""
 "로 기록했거나 오류가 발생했을 경우 제거하지 않습니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:207
+#: ../src/xz/xz.1:208
 msgid ""
 "Sending B<SIGINFO> or B<SIGUSR1> to the B<xz> process makes it print "
 "progress information to standard error.  This has only limited use since "
@@ -298,13 +298,13 @@ msgstr ""
 "B<--verbose> 옵션을 지정하면 진행 표시줄을 자동으로 나타냅니다."
 
 #. type: SS
-#: ../src/xz/xz.1:208
+#: ../src/xz/xz.1:209
 #, no-wrap
 msgid "Memory usage"
 msgstr "메모리 사용"
 
 #. type: Plain text
-#: ../src/xz/xz.1:224
+#: ../src/xz/xz.1:225
 msgid ""
 "The memory usage of B<xz> varies from a few hundred kilobytes to several "
 "gigabytes depending on the compression settings.  The settings used when "
@@ -324,7 +324,7 @@ msgstr ""
 "니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:236
+#: ../src/xz/xz.1:237
 msgid ""
 "Especially users of older systems may find the possibility of very large "
 "memory usage annoying.  To prevent uncomfortable surprises, B<xz> has a "
@@ -341,7 +341,7 @@ msgstr ""
 "B<mmap>(2)을 먹통으로 만듭니다)."
 
 #. type: Plain text
-#: ../src/xz/xz.1:258
+#: ../src/xz/xz.1:259
 msgid ""
 "The memory usage limiter can be enabled with the command line option B<--"
 "memlimit=>I<limit>.  Often it is more convenient to enable the limiter by "
@@ -366,7 +366,7 @@ msgstr ""
 "때문에 별로 쓸모가 없습니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:277
+#: ../src/xz/xz.1:278
 msgid ""
 "If the specified memory usage limit is exceeded when decompressing, B<xz> "
 "will display an error and decompressing the file will fail.  If the limit is "
@@ -388,13 +388,13 @@ msgstr ""
 "에 못미치게 약간 줄여서 진행합니다."
 
 #. type: SS
-#: ../src/xz/xz.1:278
+#: ../src/xz/xz.1:279
 #, no-wrap
 msgid "Concatenation and padding with .xz files"
 msgstr ".xz 파일 결합 및 패딩"
 
 #. type: Plain text
-#: ../src/xz/xz.1:286
+#: ../src/xz/xz.1:287
 msgid ""
 "It is possible to concatenate B<.xz> files as is.  B<xz> will decompress "
 "such files as if they were a single B<.xz> file."
@@ -403,7 +403,7 @@ msgstr ""
 "일 때 처럼 압축해제합니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:295
+#: ../src/xz/xz.1:296
 msgid ""
 "It is possible to insert padding between the concatenated parts or after the "
 "last part.  The padding must consist of null bytes and the size of the "
@@ -416,25 +416,25 @@ msgstr ""
 "일 크기를 이루는 매체에 B<.xz> 파일을 저장했을 경우에 요긴할 수 있습니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:299
+#: ../src/xz/xz.1:300
 msgid ""
 "Concatenation and padding are not allowed with B<.lzma> files or raw streams."
 msgstr "B<.lzma> 파일 또는 원시 스트림의 경우 결합과 패딩을 허용하지 않습니다."
 
 #. type: SH
-#: ../src/xz/xz.1:300 ../src/xzdec/xzdec.1:61
+#: ../src/xz/xz.1:301 ../src/xzdec/xzdec.1:61
 #, no-wrap
 msgid "OPTIONS"
 msgstr "옵션"
 
 #. type: SS
-#: ../src/xz/xz.1:302
+#: ../src/xz/xz.1:303
 #, no-wrap
 msgid "Integer suffixes and special values"
 msgstr "정수 접두사와 별도 값"
 
 #. type: Plain text
-#: ../src/xz/xz.1:306
+#: ../src/xz/xz.1:307
 msgid ""
 "In most places where an integer argument is expected, an optional suffix is "
 "supported to easily indicate large integers.  There must be no space between "
@@ -444,13 +444,13 @@ msgstr ""
 "가 접미사를 지원합니다.  정수와 접미사 사이에 어떤 공백이 있으면 안됩니다."
 
 #. type: TP
-#: ../src/xz/xz.1:306
+#: ../src/xz/xz.1:307
 #, no-wrap
 msgid "B<KiB>"
 msgstr "B<KiB>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:317
+#: ../src/xz/xz.1:318
 msgid ""
 "Multiply the integer by 1,024 (2^10).  B<Ki>, B<k>, B<kB>, B<K>, and B<KB> "
 "are accepted as synonyms for B<KiB>."
@@ -459,13 +459,13 @@ msgstr ""
 "어로 받아들입니다."
 
 #. type: TP
-#: ../src/xz/xz.1:317
+#: ../src/xz/xz.1:318
 #, no-wrap
 msgid "B<MiB>"
 msgstr "B<MiB>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:327
+#: ../src/xz/xz.1:328
 msgid ""
 "Multiply the integer by 1,048,576 (2^20).  B<Mi>, B<m>, B<M>, and B<MB> are "
 "accepted as synonyms for B<MiB>."
@@ -474,13 +474,13 @@ msgstr ""
 "로 받아들입니다."
 
 #. type: TP
-#: ../src/xz/xz.1:327
+#: ../src/xz/xz.1:328
 #, no-wrap
 msgid "B<GiB>"
 msgstr "B<GiB>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:337
+#: ../src/xz/xz.1:338
 msgid ""
 "Multiply the integer by 1,073,741,824 (2^30).  B<Gi>, B<g>, B<G>, and B<GB> "
 "are accepted as synonyms for B<GiB>."
@@ -489,7 +489,7 @@ msgstr ""
 "의어로 받아들입니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:342
+#: ../src/xz/xz.1:343
 msgid ""
 "The special value B<max> can be used to indicate the maximum integer value "
 "supported by the option."
@@ -498,26 +498,26 @@ msgstr ""
 "다."
 
 #. type: SS
-#: ../src/xz/xz.1:343
+#: ../src/xz/xz.1:344
 #, no-wrap
 msgid "Operation mode"
 msgstr "동작 모드"
 
 #. type: Plain text
-#: ../src/xz/xz.1:346
+#: ../src/xz/xz.1:347
 msgid ""
 "If multiple operation mode options are given, the last one takes effect."
 msgstr ""
 "여러 동작 모드를 보여드리겠습니다만, 마지막에 주어진 동작 모드로 동작합니다."
 
 #. type: TP
-#: ../src/xz/xz.1:346
+#: ../src/xz/xz.1:347
 #, no-wrap
 msgid "B<-z>, B<--compress>"
 msgstr "B<-z>, B<--compress>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:355
+#: ../src/xz/xz.1:356
 msgid ""
 "Compress.  This is the default operation mode when no operation mode option "
 "is specified and no other operation mode is implied from the command name "
@@ -528,24 +528,24 @@ msgstr ""
 "를 암시)."
 
 #. type: TP
-#: ../src/xz/xz.1:355 ../src/xzdec/xzdec.1:62
+#: ../src/xz/xz.1:356 ../src/xzdec/xzdec.1:62
 #, no-wrap
 msgid "B<-d>, B<--decompress>, B<--uncompress>"
 msgstr "B<-d>, B<--decompress>, B<--uncompress>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:358
+#: ../src/xz/xz.1:359
 msgid "Decompress."
 msgstr "압축을 해제합니다."
 
 #. type: TP
-#: ../src/xz/xz.1:358
+#: ../src/xz/xz.1:359
 #, no-wrap
 msgid "B<-t>, B<--test>"
 msgstr "B<-t>, B<--test>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:367
+#: ../src/xz/xz.1:368
 msgid ""
 "Test the integrity of compressed I<files>.  This option is equivalent to B<--"
 "decompress --stdout> except that the decompressed data is discarded instead "
@@ -556,13 +556,13 @@ msgstr ""
 "stdout>과 동일합니다.  어떤 파일도 만들거나 제거하지 않습니다."
 
 #. type: TP
-#: ../src/xz/xz.1:367
+#: ../src/xz/xz.1:368
 #, no-wrap
 msgid "B<-l>, B<--list>"
 msgstr "B<-l>, B<--list>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:376
+#: ../src/xz/xz.1:377
 msgid ""
 "Print information about compressed I<files>.  No uncompressed output is "
 "produced, and no files are created or removed.  In list mode, the program "
@@ -574,7 +574,7 @@ msgstr ""
 "력 또는 기타 탐색 불가능한 원본에서 압축 데이터를 읽을 수 없습니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:391
+#: ../src/xz/xz.1:392
 msgid ""
 "The default listing shows basic information about I<files>, one file per "
 "line.  To get more detailed information, use also the B<--verbose> option.  "
@@ -591,7 +591,7 @@ msgstr ""
 "B<less\\ -S> 명령이 편리할 수 있습니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:398
+#: ../src/xz/xz.1:399
 msgid ""
 "The exact output may vary between B<xz> versions and different locales.  For "
 "machine-readable output, B<--robot --list> should be used."
@@ -600,24 +600,24 @@ msgstr ""
 "력시 B<--robot --list> 옵션을 사용합니다."
 
 #. type: SS
-#: ../src/xz/xz.1:399
+#: ../src/xz/xz.1:400
 #, no-wrap
 msgid "Operation modifiers"
 msgstr "동작 수정자"
 
 #. type: TP
-#: ../src/xz/xz.1:400 ../src/xzdec/xzdec.1:69
+#: ../src/xz/xz.1:401 ../src/xzdec/xzdec.1:69
 #, no-wrap
 msgid "B<-k>, B<--keep>"
 msgstr "B<-k>, B<--keep>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:403
+#: ../src/xz/xz.1:404
 msgid "Don't delete the input files."
 msgstr "입력 파일을 삭제하지 않습니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:417
+#: ../src/xz/xz.1:418
 msgid ""
 "Since B<xz> 5.2.6, this option also makes B<xz> compress or decompress even "
 "if the input is a symbolic link to a regular file, has more than one hard "
@@ -632,25 +632,25 @@ msgstr ""
 "능했습니다."
 
 #. type: TP
-#: ../src/xz/xz.1:417
+#: ../src/xz/xz.1:418
 #, no-wrap
 msgid "B<-f>, B<--force>"
 msgstr "B<-f>, B<--force>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:420
+#: ../src/xz/xz.1:421
 msgid "This option has several effects:"
 msgstr "이 옵션은 몇가지 동작에 영향을 줍니다:"
 
 #. type: Plain text
-#: ../src/xz/xz.1:424
+#: ../src/xz/xz.1:425
 msgid ""
 "If the target file already exists, delete it before compressing or "
 "decompressing."
 msgstr "대상 파일이 이미 있으면, 압축 또는 압축 해제 전 삭제합니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:431
+#: ../src/xz/xz.1:432
 msgid ""
 "Compress or decompress even if the input is a symbolic link to a regular "
 "file, has more than one hard link, or has the setuid, setgid, or sticky bit "
@@ -661,7 +661,7 @@ msgstr ""
 "합니다.  setuid, setgid, 끈적이 비트는 대상 파일에 복사하지 않습니다"
 
 #. type: Plain text
-#: ../src/xz/xz.1:456
+#: ../src/xz/xz.1:457
 msgid ""
 "When used with B<--decompress> B<--stdout> and B<xz> cannot recognize the "
 "type of the source file, copy the source file as is to standard output.  "
@@ -682,13 +682,13 @@ msgstr ""
 "니다."
 
 #. type: TP
-#: ../src/xz/xz.1:457 ../src/xzdec/xzdec.1:76
+#: ../src/xz/xz.1:458 ../src/xzdec/xzdec.1:76
 #, no-wrap
 msgid "B<-c>, B<--stdout>, B<--to-stdout>"
 msgstr "B<-c>, B<--stdout>, B<--to-stdout>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:463
+#: ../src/xz/xz.1:464
 msgid ""
 "Write the compressed or decompressed data to standard output instead of a "
 "file.  This implies B<--keep>."
@@ -697,13 +697,13 @@ msgstr ""
 "를 생략했습니다."
 
 #. type: TP
-#: ../src/xz/xz.1:463
+#: ../src/xz/xz.1:464
 #, no-wrap
 msgid "B<--single-stream>"
 msgstr "B<--single-stream>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:472
+#: ../src/xz/xz.1:473
 msgid ""
 "Decompress only the first B<.xz> stream, and silently ignore possible "
 "remaining input data following the stream.  Normally such trailing garbage "
@@ -714,7 +714,7 @@ msgstr ""
 "타냅니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:481
+#: ../src/xz/xz.1:482
 msgid ""
 "B<xz> never decompresses more than one stream from B<.lzma> files or raw "
 "streams, but this option still makes B<xz> ignore the possible trailing data "
@@ -725,7 +725,7 @@ msgstr ""
 "시 스트림을 처리한 다음에 뒤따라오는 데이터를 무시하도록 합니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:486
+#: ../src/xz/xz.1:487
 msgid ""
 "This option has no effect if the operation mode is not B<--decompress> or "
 "B<--test>."
@@ -734,13 +734,13 @@ msgstr ""
 "영향을 주지 않습니다."
 
 #. type: TP
-#: ../src/xz/xz.1:486
+#: ../src/xz/xz.1:487
 #, no-wrap
 msgid "B<--no-sparse>"
 msgstr "B<--no-sparse>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:498
+#: ../src/xz/xz.1:499
 msgid ""
 "Disable creation of sparse files.  By default, if decompressing into a "
 "regular file, B<xz> tries to make the file sparse if the decompressed data "
@@ -758,13 +758,13 @@ msgstr ""
 "줄여 압축 해제 속도를 올릴 수 있습니다."
 
 #. type: TP
-#: ../src/xz/xz.1:498
+#: ../src/xz/xz.1:499
 #, no-wrap
 msgid "B<-S> I<.suf>, B<--suffix=>I<.suf>"
 msgstr "B<-S> I<.suf>, B<--suffix=>I<.suf>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:510
+#: ../src/xz/xz.1:511
 msgid ""
 "When compressing, use I<.suf> as the suffix for the target file instead of "
 "B<.xz> or B<.lzma>.  If not writing to standard output and the source file "
@@ -776,7 +776,7 @@ msgstr ""
 "경고를 나타내고 해당 파일을 건너뜁니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:524
+#: ../src/xz/xz.1:525
 msgid ""
 "When decompressing, recognize files with the suffix I<.suf> in addition to "
 "files with the B<.xz>, B<.txz>, B<.lzma>, B<.tlz>, or B<.lz> suffix.  If the "
@@ -788,7 +788,7 @@ msgstr ""
 "접미사가 붙어있으면, 해당 접미사를 제거하여 대상 파일 이름을 알아냅니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:530
+#: ../src/xz/xz.1:531
 msgid ""
 "When compressing or decompressing raw streams (B<--format=raw>), the suffix "
 "must always be specified unless writing to standard output, because there is "
@@ -798,13 +798,13 @@ msgstr ""
 "없기 때문에, 표준 출력으로 기록하지 않는 한 접미사를 반드시 지정해야 합니다."
 
 #. type: TP
-#: ../src/xz/xz.1:530
+#: ../src/xz/xz.1:531
 #, no-wrap
 msgid "B<--files>[B<=>I<file>]"
 msgstr "B<--files>[B<=>I<E<lt>파일E<gt>>]"
 
 #. type: Plain text
-#: ../src/xz/xz.1:544
+#: ../src/xz/xz.1:545
 msgid ""
 "Read the filenames to process from I<file>; if I<file> is omitted, filenames "
 "are read from standard input.  Filenames must be terminated with the newline "
@@ -819,13 +819,13 @@ msgstr ""
 "읽어들이기 전 해당 명령행 인자를 먼저 처리합니다."
 
 #. type: TP
-#: ../src/xz/xz.1:544
+#: ../src/xz/xz.1:545
 #, no-wrap
 msgid "B<--files0>[B<=>I<file>]"
 msgstr "B<--files0>[B<=>I<E<lt>파일E<gt>>]"
 
 #. type: Plain text
-#: ../src/xz/xz.1:548
+#: ../src/xz/xz.1:549
 msgid ""
 "This is identical to B<--files>[B<=>I<file>] except that each filename must "
 "be terminated with the null character."
@@ -834,30 +834,30 @@ msgstr ""
 "일E<gt>>] 옵션과 동일합니다."
 
 #. type: SS
-#: ../src/xz/xz.1:549
+#: ../src/xz/xz.1:550
 #, no-wrap
 msgid "Basic file format and compression options"
 msgstr "기본 파일 형식 및 압축 옵션"
 
 #. type: TP
-#: ../src/xz/xz.1:550
+#: ../src/xz/xz.1:551
 #, no-wrap
 msgid "B<-F> I<format>, B<--format=>I<format>"
 msgstr "B<-F> I<format>, B<--format=>I<E<lt>형식E<gt>>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:555
+#: ../src/xz/xz.1:556
 msgid "Specify the file I<format> to compress or decompress:"
 msgstr "압축 또는 압축해제 파일 I<E<lt>형식E<gt>>을 지정합니다:"
 
 #. type: TP
-#: ../src/xz/xz.1:556
+#: ../src/xz/xz.1:557
 #, no-wrap
 msgid "B<auto>"
 msgstr "B<auto>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:568
+#: ../src/xz/xz.1:569
 msgid ""
 "This is the default.  When compressing, B<auto> is equivalent to B<xz>.  "
 "When decompressing, the format of the input file is automatically detected.  "
@@ -869,13 +869,13 @@ msgstr ""
 "format=raw>)의 경우 자동으로 찾을 수 없습니다."
 
 #. type: TP
-#: ../src/xz/xz.1:568
+#: ../src/xz/xz.1:569
 #, no-wrap
 msgid "B<xz>"
 msgstr "B<xz>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:575
+#: ../src/xz/xz.1:576
 msgid ""
 "Compress to the B<.xz> file format, or accept only B<.xz> files when "
 "decompressing."
@@ -883,13 +883,13 @@ msgstr ""
 "B<.xz> 파일 형식으로 압축하거나, 압축 해제시 B<.xz> 파일만 받아들입니다."
 
 #. type: TP
-#: ../src/xz/xz.1:575
+#: ../src/xz/xz.1:576
 #, no-wrap
 msgid "B<lzma>, B<alone>"
 msgstr "B<lzma>, B<alone>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:585
+#: ../src/xz/xz.1:586
 msgid ""
 "Compress to the legacy B<.lzma> file format, or accept only B<.lzma> files "
 "when decompressing.  The alternative name B<alone> is provided for backwards "
@@ -899,19 +899,19 @@ msgstr ""
 "니다.  B<alone> 대체 명령은 LZMA 유틸리티 하위 호환성을 목적으로 제공합니다."
 
 #. type: TP
-#: ../src/xz/xz.1:585
+#: ../src/xz/xz.1:586
 #, no-wrap
 msgid "B<lzip>"
 msgstr "B<lzip>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:591
+#: ../src/xz/xz.1:592
 msgid ""
 "Accept only B<.lz> files when decompressing.  Compression is not supported."
 msgstr "압축 해제시 B<.lz> 파일만 받아들입니다.  압축은 지원하지 않습니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:604
+#: ../src/xz/xz.1:605
 msgid ""
 "The B<.lz> format version 0 and the unextended version 1 are supported.  "
 "Version 0 files were produced by B<lzip> 1.3 and older.  Such files aren't "
@@ -927,7 +927,7 @@ msgstr ""
 "B<lzip> 1.18에서 제거했습니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:613
+#: ../src/xz/xz.1:614
 msgid ""
 "B<lzip> 1.4 and later create files in the format version 1.  The sync flush "
 "marker extension to the format version 1 was added in B<lzip> 1.6.  This "
@@ -939,13 +939,13 @@ msgstr ""
 "B<xz> 에서 조차도 지원하지 않습니다(손상된 입력 파일로 진단함)."
 
 #. type: TP
-#: ../src/xz/xz.1:613
+#: ../src/xz/xz.1:614
 #, no-wrap
 msgid "B<raw>"
 msgstr "B<raw>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:621
+#: ../src/xz/xz.1:622
 msgid ""
 "Compress or uncompress a raw stream (no headers).  This is meant for "
 "advanced users only.  To decode raw streams, you need use B<--format=raw> "
@@ -957,13 +957,13 @@ msgstr ""
 "필터 체인을 지정하여 컨테이너 헤더에 필요한 정보를 저장하게 끔 해야합니다."
 
 #. type: TP
-#: ../src/xz/xz.1:622
+#: ../src/xz/xz.1:623
 #, no-wrap
 msgid "B<-C> I<check>, B<--check=>I<check>"
 msgstr "B<-C> I<E<lt>검사방식E<gt>>, B<--check=>I<E<lt>검사방식E<gt>>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:637
+#: ../src/xz/xz.1:638
 msgid ""
 "Specify the type of the integrity check.  The check is calculated from the "
 "uncompressed data and stored in the B<.xz> file.  This option has an effect "
@@ -977,18 +977,18 @@ msgstr ""
 "압축을 풀었을 때에 검사합니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:641
+#: ../src/xz/xz.1:642
 msgid "Supported I<check> types:"
 msgstr "지원 I<검사> 형식:"
 
 #. type: TP
-#: ../src/xz/xz.1:642
+#: ../src/xz/xz.1:643
 #, no-wrap
 msgid "B<none>"
 msgstr "B<none>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:648
+#: ../src/xz/xz.1:649
 msgid ""
 "Don't calculate an integrity check at all.  This is usually a bad idea.  "
 "This can be useful when integrity of the data is verified by other means "
@@ -999,24 +999,24 @@ msgstr ""
 "수 있습니다."
 
 #. type: TP
-#: ../src/xz/xz.1:648
+#: ../src/xz/xz.1:649
 #, no-wrap
 msgid "B<crc32>"
 msgstr "B<crc32>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:651
+#: ../src/xz/xz.1:652
 msgid "Calculate CRC32 using the polynomial from IEEE-802.3 (Ethernet)."
 msgstr "IEEE-802.3 (이더넷)의 다항 연산으로 CRC32를 계산합니다."
 
 #. type: TP
-#: ../src/xz/xz.1:651
+#: ../src/xz/xz.1:652
 #, no-wrap
 msgid "B<crc64>"
 msgstr "B<crc64>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:656
+#: ../src/xz/xz.1:657
 msgid ""
 "Calculate CRC64 using the polynomial from ECMA-182.  This is the default, "
 "since it is slightly better than CRC32 at detecting damaged files and the "
@@ -1027,18 +1027,18 @@ msgstr ""
 "다."
 
 #. type: TP
-#: ../src/xz/xz.1:656
+#: ../src/xz/xz.1:657
 #, no-wrap
 msgid "B<sha256>"
 msgstr "B<sha256>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:660
+#: ../src/xz/xz.1:661
 msgid "Calculate SHA-256.  This is somewhat slower than CRC32 and CRC64."
 msgstr "SHA-256 해시를 계산합니다.  CRC32와 CRC64 보다는 좀 느립니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:666
+#: ../src/xz/xz.1:667
 msgid ""
 "Integrity of the B<.xz> headers is always verified with CRC32.  It is not "
 "possible to change or disable it."
@@ -1047,13 +1047,13 @@ msgstr ""
 "possible to change or disable it."
 
 #. type: TP
-#: ../src/xz/xz.1:666
+#: ../src/xz/xz.1:667
 #, no-wrap
 msgid "B<--ignore-check>"
 msgstr "B<--ignore-check>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:672
+#: ../src/xz/xz.1:673
 msgid ""
 "Don't verify the integrity check of the compressed data when decompressing.  "
 "The CRC32 values in the B<.xz> headers will still be verified normally."
@@ -1062,7 +1062,7 @@ msgstr ""
 "다.  B<.xz> 헤더의 CRC32 값은 그래도 여전히 보통 방식으로 검증합니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:675
+#: ../src/xz/xz.1:676
 msgid ""
 "B<Do not use this option unless you know what you are doing.> Possible "
 "reasons to use this option:"
@@ -1071,12 +1071,12 @@ msgstr ""
 "을 사용하는 타당한 이유로:"
 
 #. type: Plain text
-#: ../src/xz/xz.1:678
+#: ../src/xz/xz.1:679
 msgid "Trying to recover data from a corrupt .xz file."
 msgstr "깨진 .xz 파일에서 데이터 복구를 시도합니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:684
+#: ../src/xz/xz.1:685
 msgid ""
 "Speeding up decompression.  This matters mostly with SHA-256 or with files "
 "that have compressed extremely well.  It's recommended to not use this "
@@ -1088,13 +1088,13 @@ msgstr ""
 "이 옵션을 사용하지 않는게 좋습니다."
 
 #. type: TP
-#: ../src/xz/xz.1:685
+#: ../src/xz/xz.1:686
 #, no-wrap
 msgid "B<-0> ... B<-9>"
 msgstr "B<-0> ... B<-9>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:694
+#: ../src/xz/xz.1:695
 msgid ""
 "Select a compression preset level.  The default is B<-6>.  If multiple "
 "preset levels are specified, the last one takes effect.  If a custom filter "
@@ -1106,7 +1106,7 @@ msgstr ""
 "축 사전 설정 수준 값을 설정할 때 개별 필터 체인을 정리합니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:709
+#: ../src/xz/xz.1:710
 msgid ""
 "The differences between the presets are more significant than with "
 "B<gzip>(1)  and B<bzip2>(1).  The selected compression settings determine "
@@ -1122,13 +1122,13 @@ msgstr ""
 "종 B<모든 동작에 -9를 몰래 활용하는건 바람직하지 않습니다>."
 
 #. type: TP
-#: ../src/xz/xz.1:710
+#: ../src/xz/xz.1:711
 #, no-wrap
 msgid "B<-0> ... B<-3>"
 msgstr "B<-0> ... B<-3>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:722
+#: ../src/xz/xz.1:723
 msgid ""
 "These are somewhat fast presets.  B<-0> is sometimes faster than B<gzip -9> "
 "while compressing much better.  The higher ones often have speed comparable "
@@ -1141,13 +1141,13 @@ msgstr ""
 "나은 압축율을 보입니다."
 
 #. type: TP
-#: ../src/xz/xz.1:722
+#: ../src/xz/xz.1:723
 #, no-wrap
 msgid "B<-4> ... B<-6>"
 msgstr "B<-4> ... B<-6>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:736
+#: ../src/xz/xz.1:737
 msgid ""
 "Good to very good compression while keeping decompressor memory usage "
 "reasonable even for old systems.  B<-6> is the default, which is usually a "
@@ -1162,13 +1162,13 @@ msgstr ""
 "오.)"
 
 #. type: TP
-#: ../src/xz/xz.1:736
+#: ../src/xz/xz.1:737
 #, no-wrap
 msgid "B<-7 ... -9>"
 msgstr "B<-7 ... -9>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:743
+#: ../src/xz/xz.1:744
 msgid ""
 "These are like B<-6> but with higher compressor and decompressor memory "
 "requirements.  These are useful only when compressing files bigger than 8\\ "
@@ -1178,7 +1178,7 @@ msgstr ""
 "축 파일이 각각 8MiB, 16MiB, 32MiB 보다 클 경우에만 쓸만한 옵션입니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:751
+#: ../src/xz/xz.1:752
 msgid ""
 "On the same hardware, the decompression speed is approximately a constant "
 "number of bytes of compressed data per second.  In other words, the better "
@@ -1191,282 +1191,282 @@ msgstr ""
 "올라갑니다.  이는 곧 초당 비압축 데이터 출력 양이 달라질 수 있단 뜻입니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:753
+#: ../src/xz/xz.1:754
 msgid "The following table summarises the features of the presets:"
 msgstr "다음 표에 사전 설정 기능을 정리했습니다:"
 
 #. type: tbl table
-#: ../src/xz/xz.1:760 ../src/xz/xz.1:841 ../src/xz/xz.1:2839
+#: ../src/xz/xz.1:761 ../src/xz/xz.1:842 ../src/xz/xz.1:2839
 #, no-wrap
 msgid "Preset"
 msgstr "Preset"
 
 #. type: tbl table
-#: ../src/xz/xz.1:760 ../src/xz/xz.1:841
+#: ../src/xz/xz.1:761 ../src/xz/xz.1:842
 #, no-wrap
 msgid "DictSize"
 msgstr "DictSize"
 
 #. type: tbl table
-#: ../src/xz/xz.1:760 ../src/xz/xz.1:841 ../src/xz/xz.1:2839
+#: ../src/xz/xz.1:761 ../src/xz/xz.1:842 ../src/xz/xz.1:2839
 #, no-wrap
 msgid "CompCPU"
 msgstr "CompCPU"
 
 #. type: tbl table
-#: ../src/xz/xz.1:760 ../src/xz/xz.1:841
+#: ../src/xz/xz.1:761 ../src/xz/xz.1:842
 #, no-wrap
 msgid "CompMem"
 msgstr "CompMem"
 
 #. type: tbl table
-#: ../src/xz/xz.1:760 ../src/xz/xz.1:841
+#: ../src/xz/xz.1:761 ../src/xz/xz.1:842
 #, no-wrap
 msgid "DecMem"
 msgstr "DecMem"
 
 #. type: tbl table
-#: ../src/xz/xz.1:761 ../src/xz/xz.1:2450 ../src/xz/xz.1:2475
+#: ../src/xz/xz.1:762 ../src/xz/xz.1:2450 ../src/xz/xz.1:2475
 #: ../src/xz/xz.1:2840
 #, no-wrap
 msgid "-0"
 msgstr "-0"
 
 #. type: tbl table
-#: ../src/xz/xz.1:761 ../src/xz/xz.1:842 ../src/xz/xz.1:2450
+#: ../src/xz/xz.1:762 ../src/xz/xz.1:843 ../src/xz/xz.1:2450
 #, no-wrap
 msgid "256 KiB"
 msgstr "256 KiB"
 
 #. type: TP
-#: ../src/xz/xz.1:761 ../src/xz/xz.1:2840 ../src/scripts/xzgrep.1:82
+#: ../src/xz/xz.1:762 ../src/xz/xz.1:2840 ../src/scripts/xzgrep.1:82
 #, no-wrap
 msgid "0"
 msgstr "0"
 
 #. type: tbl table
-#: ../src/xz/xz.1:761 ../src/xz/xz.1:763 ../src/xz/xz.1:844 ../src/xz/xz.1:2475
+#: ../src/xz/xz.1:762 ../src/xz/xz.1:764 ../src/xz/xz.1:845 ../src/xz/xz.1:2475
 #, no-wrap
 msgid "3 MiB"
 msgstr "3 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:761 ../src/xz/xz.1:762 ../src/xz/xz.1:842 ../src/xz/xz.1:843
+#: ../src/xz/xz.1:762 ../src/xz/xz.1:763 ../src/xz/xz.1:843 ../src/xz/xz.1:844
 #: ../src/xz/xz.1:2451 ../src/xz/xz.1:2452 ../src/xz/xz.1:2454
 #, no-wrap
 msgid "1 MiB"
 msgstr "1 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:762 ../src/xz/xz.1:2451 ../src/xz/xz.1:2476
+#: ../src/xz/xz.1:763 ../src/xz/xz.1:2451 ../src/xz/xz.1:2476
 #: ../src/xz/xz.1:2841
 #, no-wrap
 msgid "-1"
 msgstr "-1"
 
 #. type: TP
-#: ../src/xz/xz.1:762 ../src/xz/xz.1:1758 ../src/xz/xz.1:2841
+#: ../src/xz/xz.1:763 ../src/xz/xz.1:1758 ../src/xz/xz.1:2841
 #: ../src/scripts/xzgrep.1:86
 #, no-wrap
 msgid "1"
 msgstr "1"
 
 #. type: tbl table
-#: ../src/xz/xz.1:762 ../src/xz/xz.1:766 ../src/xz/xz.1:767 ../src/xz/xz.1:847
-#: ../src/xz/xz.1:848 ../src/xz/xz.1:2476
+#: ../src/xz/xz.1:763 ../src/xz/xz.1:767 ../src/xz/xz.1:768 ../src/xz/xz.1:848
+#: ../src/xz/xz.1:849 ../src/xz/xz.1:2476
 #, no-wrap
 msgid "9 MiB"
 msgstr "9 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:762 ../src/xz/xz.1:763 ../src/xz/xz.1:843 ../src/xz/xz.1:844
+#: ../src/xz/xz.1:763 ../src/xz/xz.1:764 ../src/xz/xz.1:844 ../src/xz/xz.1:845
 #: ../src/xz/xz.1:2452 ../src/xz/xz.1:2455 ../src/xz/xz.1:2476
 #, no-wrap
 msgid "2 MiB"
 msgstr "2 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:763 ../src/xz/xz.1:2452 ../src/xz/xz.1:2477
+#: ../src/xz/xz.1:764 ../src/xz/xz.1:2452 ../src/xz/xz.1:2477
 #: ../src/xz/xz.1:2842
 #, no-wrap
 msgid "-2"
 msgstr "-2"
 
 #. type: tbl table
-#: ../src/xz/xz.1:763 ../src/xz/xz.1:1760 ../src/xz/xz.1:2842
+#: ../src/xz/xz.1:764 ../src/xz/xz.1:1760 ../src/xz/xz.1:2842
 #, no-wrap
 msgid "2"
 msgstr "2"
 
 #. type: tbl table
-#: ../src/xz/xz.1:763 ../src/xz/xz.1:768 ../src/xz/xz.1:849 ../src/xz/xz.1:2477
+#: ../src/xz/xz.1:764 ../src/xz/xz.1:769 ../src/xz/xz.1:850 ../src/xz/xz.1:2477
 #, no-wrap
 msgid "17 MiB"
 msgstr "17 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:764 ../src/xz/xz.1:2453 ../src/xz/xz.1:2478
+#: ../src/xz/xz.1:765 ../src/xz/xz.1:2453 ../src/xz/xz.1:2478
 #: ../src/xz/xz.1:2843
 #, no-wrap
 msgid "-3"
 msgstr "-3"
 
 #. type: tbl table
-#: ../src/xz/xz.1:764 ../src/xz/xz.1:765 ../src/xz/xz.1:842 ../src/xz/xz.1:845
-#: ../src/xz/xz.1:846 ../src/xz/xz.1:2453 ../src/xz/xz.1:2454
+#: ../src/xz/xz.1:765 ../src/xz/xz.1:766 ../src/xz/xz.1:843 ../src/xz/xz.1:846
+#: ../src/xz/xz.1:847 ../src/xz/xz.1:2453 ../src/xz/xz.1:2454
 #: ../src/xz/xz.1:2456
 #, no-wrap
 msgid "4 MiB"
 msgstr "4 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:764 ../src/xz/xz.1:2843
+#: ../src/xz/xz.1:765 ../src/xz/xz.1:2843
 #, no-wrap
 msgid "3"
 msgstr "3"
 
 #. type: tbl table
-#: ../src/xz/xz.1:764 ../src/xz/xz.1:769 ../src/xz/xz.1:850 ../src/xz/xz.1:2458
+#: ../src/xz/xz.1:765 ../src/xz/xz.1:770 ../src/xz/xz.1:851 ../src/xz/xz.1:2458
 #: ../src/xz/xz.1:2459 ../src/xz/xz.1:2478
 #, no-wrap
 msgid "32 MiB"
 msgstr "32 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:764 ../src/xz/xz.1:765 ../src/xz/xz.1:845 ../src/xz/xz.1:846
+#: ../src/xz/xz.1:765 ../src/xz/xz.1:766 ../src/xz/xz.1:846 ../src/xz/xz.1:847
 #, no-wrap
 msgid "5 MiB"
 msgstr "5 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:765 ../src/xz/xz.1:2454 ../src/xz/xz.1:2479
+#: ../src/xz/xz.1:766 ../src/xz/xz.1:2454 ../src/xz/xz.1:2479
 #: ../src/xz/xz.1:2844
 #, no-wrap
 msgid "-4"
 msgstr "-4"
 
 #. type: tbl table
-#: ../src/xz/xz.1:765 ../src/xz/xz.1:1759 ../src/xz/xz.1:1761
+#: ../src/xz/xz.1:766 ../src/xz/xz.1:1759 ../src/xz/xz.1:1761
 #: ../src/xz/xz.1:1762 ../src/xz/xz.1:1764 ../src/xz/xz.1:2844
 #, no-wrap
 msgid "4"
 msgstr "4"
 
 #. type: tbl table
-#: ../src/xz/xz.1:765 ../src/xz/xz.1:845 ../src/xz/xz.1:846 ../src/xz/xz.1:2479
+#: ../src/xz/xz.1:766 ../src/xz/xz.1:846 ../src/xz/xz.1:847 ../src/xz/xz.1:2479
 #, no-wrap
 msgid "48 MiB"
 msgstr "48 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:766 ../src/xz/xz.1:2455 ../src/xz/xz.1:2480
+#: ../src/xz/xz.1:767 ../src/xz/xz.1:2455 ../src/xz/xz.1:2480
 #: ../src/xz/xz.1:2845
 #, no-wrap
 msgid "-5"
 msgstr "-5"
 
 #. type: tbl table
-#: ../src/xz/xz.1:766 ../src/xz/xz.1:767 ../src/xz/xz.1:847 ../src/xz/xz.1:848
+#: ../src/xz/xz.1:767 ../src/xz/xz.1:768 ../src/xz/xz.1:848 ../src/xz/xz.1:849
 #: ../src/xz/xz.1:2455 ../src/xz/xz.1:2456 ../src/xz/xz.1:2457
 #, no-wrap
 msgid "8 MiB"
 msgstr "8 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:766 ../src/xz/xz.1:2845
+#: ../src/xz/xz.1:767 ../src/xz/xz.1:2845
 #, no-wrap
 msgid "5"
 msgstr "5"
 
 #. type: tbl table
-#: ../src/xz/xz.1:766 ../src/xz/xz.1:767 ../src/xz/xz.1:847 ../src/xz/xz.1:848
+#: ../src/xz/xz.1:767 ../src/xz/xz.1:768 ../src/xz/xz.1:848 ../src/xz/xz.1:849
 #: ../src/xz/xz.1:2480 ../src/xz/xz.1:2481
 #, no-wrap
 msgid "94 MiB"
 msgstr "94 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:767 ../src/xz/xz.1:2456 ../src/xz/xz.1:2481
+#: ../src/xz/xz.1:768 ../src/xz/xz.1:2456 ../src/xz/xz.1:2481
 #: ../src/xz/xz.1:2846
 #, no-wrap
 msgid "-6"
 msgstr "-6"
 
 #. type: tbl table
-#: ../src/xz/xz.1:767 ../src/xz/xz.1:768 ../src/xz/xz.1:769 ../src/xz/xz.1:770
+#: ../src/xz/xz.1:768 ../src/xz/xz.1:769 ../src/xz/xz.1:770 ../src/xz/xz.1:771
 #: ../src/xz/xz.1:2846
 #, no-wrap
 msgid "6"
 msgstr "6"
 
 #. type: tbl table
-#: ../src/xz/xz.1:768 ../src/xz/xz.1:2457 ../src/xz/xz.1:2482
+#: ../src/xz/xz.1:769 ../src/xz/xz.1:2457 ../src/xz/xz.1:2482
 #, no-wrap
 msgid "-7"
 msgstr "-7"
 
 #. type: tbl table
-#: ../src/xz/xz.1:768 ../src/xz/xz.1:849 ../src/xz/xz.1:2457
+#: ../src/xz/xz.1:769 ../src/xz/xz.1:850 ../src/xz/xz.1:2457
 #: ../src/xz/xz.1:2458 ../src/xz/xz.1:2479
 #, no-wrap
 msgid "16 MiB"
 msgstr "16 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:768 ../src/xz/xz.1:849 ../src/xz/xz.1:2482
+#: ../src/xz/xz.1:769 ../src/xz/xz.1:850 ../src/xz/xz.1:2482
 #, no-wrap
 msgid "186 MiB"
 msgstr "186 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:769 ../src/xz/xz.1:2458 ../src/xz/xz.1:2483
+#: ../src/xz/xz.1:770 ../src/xz/xz.1:2458 ../src/xz/xz.1:2483
 #, no-wrap
 msgid "-8"
 msgstr "-8"
 
 #. type: tbl table
-#: ../src/xz/xz.1:769 ../src/xz/xz.1:850 ../src/xz/xz.1:2483
+#: ../src/xz/xz.1:770 ../src/xz/xz.1:851 ../src/xz/xz.1:2483
 #, no-wrap
 msgid "370 MiB"
 msgstr "370 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:769 ../src/xz/xz.1:850
+#: ../src/xz/xz.1:770 ../src/xz/xz.1:851
 #, no-wrap
 msgid "33 MiB"
 msgstr "33 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:770 ../src/xz/xz.1:2459 ../src/xz/xz.1:2484
+#: ../src/xz/xz.1:771 ../src/xz/xz.1:2459 ../src/xz/xz.1:2484
 #, no-wrap
 msgid "-9"
 msgstr "-9"
 
 #. type: tbl table
-#: ../src/xz/xz.1:770 ../src/xz/xz.1:851 ../src/xz/xz.1:2459
+#: ../src/xz/xz.1:771 ../src/xz/xz.1:852 ../src/xz/xz.1:2459
 #, no-wrap
 msgid "64 MiB"
 msgstr "64 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:770 ../src/xz/xz.1:851 ../src/xz/xz.1:2484
+#: ../src/xz/xz.1:771 ../src/xz/xz.1:852 ../src/xz/xz.1:2484
 #, no-wrap
 msgid "674 MiB"
 msgstr "674 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:770 ../src/xz/xz.1:851
+#: ../src/xz/xz.1:771 ../src/xz/xz.1:852
 #, no-wrap
 msgid "65 MiB"
 msgstr "65 MiB"
 
 #. type: Plain text
-#: ../src/xz/xz.1:776
+#: ../src/xz/xz.1:777
 msgid "Column descriptions:"
 msgstr "컬럼 설명:"
 
 #. type: Plain text
-#: ../src/xz/xz.1:788
+#: ../src/xz/xz.1:789
 msgid ""
 "DictSize is the LZMA2 dictionary size.  It is waste of memory to use a "
 "dictionary bigger than the size of the uncompressed file.  This is why it is "
@@ -1480,7 +1480,7 @@ msgstr ""
 "리 양이 충분히 적거나 따로 신경쓸 필요가 없습니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:797
+#: ../src/xz/xz.1:798
 msgid ""
 "CompCPU is a simplified representation of the LZMA2 settings that affect "
 "compression speed.  The dictionary size affects speed too, so while CompCPU "
@@ -1494,7 +1494,7 @@ msgstr ""
 "가능한 한 더 좋아집니다. B<--extreme>을 참고하십시오."
 
 #. type: Plain text
-#: ../src/xz/xz.1:805
+#: ../src/xz/xz.1:806
 msgid ""
 "CompMem contains the compressor memory requirements in the single-threaded "
 "mode.  It may vary slightly between B<xz> versions.  Memory requirements of "
@@ -1506,7 +1506,7 @@ msgstr ""
 "모리 사용량은 단일-스레드 모드에서의 그것보다는 훨씬 늘어납니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:812
+#: ../src/xz/xz.1:813
 msgid ""
 "DecMem contains the decompressor memory requirements.  That is, the "
 "compression settings determine the memory requirements of the decompressor.  "
@@ -1520,13 +1520,13 @@ msgstr ""
 "조금 많지만 테이블의 값은 MiB 용량으로 완전히 반올림한 값입니다."
 
 #. type: TP
-#: ../src/xz/xz.1:813
+#: ../src/xz/xz.1:814
 #, no-wrap
 msgid "B<-e>, B<--extreme>"
 msgstr "B<-e>, B<--extreme>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:822
+#: ../src/xz/xz.1:823
 msgid ""
 "Use a slower variant of the selected compression preset level (B<-0> ... "
 "B<-9>)  to hopefully get a little bit better compression ratio, but with bad "
@@ -1541,7 +1541,7 @@ msgstr ""
 "다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:834
+#: ../src/xz/xz.1:835
 msgid ""
 "Since there are two presets with dictionary sizes 4\\ MiB and 8\\ MiB, the "
 "presets B<-3e> and B<-5e> use slightly faster settings (lower CompCPU) than "
@@ -1552,93 +1552,93 @@ msgstr ""
 "할 수 있습니다.  이런 식으로 두 사전 설정이 동일하지 않습니다."
 
 #. type: tbl table
-#: ../src/xz/xz.1:842
+#: ../src/xz/xz.1:843
 #, no-wrap
 msgid "-0e"
 msgstr "-0e"
 
 #. type: tbl table
-#: ../src/xz/xz.1:842 ../src/xz/xz.1:843 ../src/xz/xz.1:844 ../src/xz/xz.1:846
-#: ../src/xz/xz.1:848 ../src/xz/xz.1:849 ../src/xz/xz.1:850 ../src/xz/xz.1:851
+#: ../src/xz/xz.1:843 ../src/xz/xz.1:844 ../src/xz/xz.1:845 ../src/xz/xz.1:847
+#: ../src/xz/xz.1:849 ../src/xz/xz.1:850 ../src/xz/xz.1:851 ../src/xz/xz.1:852
 #: ../src/xz/xz.1:2848
 #, no-wrap
 msgid "8"
 msgstr "8"
 
 #. type: tbl table
-#: ../src/xz/xz.1:843
+#: ../src/xz/xz.1:844
 #, no-wrap
 msgid "-1e"
 msgstr "-1e"
 
 #. type: tbl table
-#: ../src/xz/xz.1:843
+#: ../src/xz/xz.1:844
 #, no-wrap
 msgid "13 MiB"
 msgstr "13 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:844
+#: ../src/xz/xz.1:845
 #, no-wrap
 msgid "-2e"
 msgstr "-2e"
 
 #. type: tbl table
-#: ../src/xz/xz.1:844
+#: ../src/xz/xz.1:845
 #, no-wrap
 msgid "25 MiB"
 msgstr "25 MiB"
 
 #. type: tbl table
-#: ../src/xz/xz.1:845
+#: ../src/xz/xz.1:846
 #, no-wrap
 msgid "-3e"
 msgstr "-3e"
 
 #. type: tbl table
-#: ../src/xz/xz.1:845 ../src/xz/xz.1:847 ../src/xz/xz.1:2847
+#: ../src/xz/xz.1:846 ../src/xz/xz.1:848 ../src/xz/xz.1:2847
 #, no-wrap
 msgid "7"
 msgstr "7"
 
 #. type: tbl table
-#: ../src/xz/xz.1:846
+#: ../src/xz/xz.1:847
 #, no-wrap
 msgid "-4e"
 msgstr "-4e"
 
 #. type: tbl table
-#: ../src/xz/xz.1:847 ../src/xz/xz.1:2847
+#: ../src/xz/xz.1:848 ../src/xz/xz.1:2847
 #, no-wrap
 msgid "-5e"
 msgstr "-5e"
 
 #. type: tbl table
-#: ../src/xz/xz.1:848 ../src/xz/xz.1:2848
+#: ../src/xz/xz.1:849 ../src/xz/xz.1:2848
 #, no-wrap
 msgid "-6e"
 msgstr "-6e"
 
 #. type: tbl table
-#: ../src/xz/xz.1:849
+#: ../src/xz/xz.1:850
 #, no-wrap
 msgid "-7e"
 msgstr "-7e"
 
 #. type: tbl table
-#: ../src/xz/xz.1:850
+#: ../src/xz/xz.1:851
 #, no-wrap
 msgid "-8e"
 msgstr "-8e"
 
 #. type: tbl table
-#: ../src/xz/xz.1:851
+#: ../src/xz/xz.1:852
 #, no-wrap
 msgid "-9e"
 msgstr "-9e"
 
 #. type: Plain text
-#: ../src/xz/xz.1:863
+#: ../src/xz/xz.1:864
 msgid ""
 "For example, there are a total of four presets that use 8\\ MiB dictionary, "
 "whose order from the fastest to the slowest is B<-5>, B<-6>, B<-5e>, and "
@@ -1648,19 +1648,19 @@ msgstr ""
 "으로 설정을 나열하자면, B<-5>, B<-6>, B<-5e>, B<-6e> 입니다."
 
 #. type: TP
-#: ../src/xz/xz.1:863
+#: ../src/xz/xz.1:864
 #, no-wrap
 msgid "B<--fast>"
 msgstr "B<--fast>"
 
 #. type: TP
-#: ../src/xz/xz.1:866
+#: ../src/xz/xz.1:867
 #, no-wrap
 msgid "B<--best>"
 msgstr "B<--best>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:877
+#: ../src/xz/xz.1:878
 msgid ""
 "These are somewhat misleading aliases for B<-0> and B<-9>, respectively.  "
 "These are provided only for backwards compatibility with LZMA Utils.  Avoid "
@@ -1670,13 +1670,13 @@ msgstr ""
 "하위 호환성을 목적으로 제공합니다.  이 옵션 사용은 피하십시오."
 
 #. type: TP
-#: ../src/xz/xz.1:877
+#: ../src/xz/xz.1:878
 #, no-wrap
 msgid "B<--block-size=>I<size>"
 msgstr "B<--block-size=>I<E<lt>크기E<gt>>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:890
+#: ../src/xz/xz.1:891
 msgid ""
 "When compressing to the B<.xz> format, split the input data into blocks of "
 "I<size> bytes.  The blocks are compressed independently from each other, "
@@ -1692,7 +1692,7 @@ msgstr ""
 "레드 모드에서도 사용할 수 있습니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:908
+#: ../src/xz/xz.1:909
 msgid ""
 "In multi-threaded mode about three times I<size> bytes will be allocated in "
 "each thread for buffering input and output.  The default I<size> is three "
@@ -1713,7 +1713,7 @@ msgstr ""
 "할 예정입니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:917
+#: ../src/xz/xz.1:918
 msgid ""
 "In single-threaded mode no block splitting is done by default.  Setting this "
 "option doesn't affect memory usage.  No size information is stored in block "
@@ -1729,13 +1729,13 @@ msgstr ""
 "중-스레드 모드에서 압축 해제가 불가능함을 의미하기도 합니다."
 
 #. type: TP
-#: ../src/xz/xz.1:917
+#: ../src/xz/xz.1:918
 #, no-wrap
 msgid "B<--block-list=>I<sizes>"
 msgstr "B<--block-list=>I<E<lt>크기E<gt>>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:923
+#: ../src/xz/xz.1:924
 msgid ""
 "When compressing to the B<.xz> format, start a new block after the given "
 "intervals of uncompressed data."
@@ -1744,7 +1744,7 @@ msgstr ""
 "에 새 블록 처리를 시작합니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:929
+#: ../src/xz/xz.1:930
 msgid ""
 "The uncompressed I<sizes> of the blocks are specified as a comma-separated "
 "list.  Omitting a size (two or more consecutive commas) is a shorthand to "
@@ -1755,7 +1755,7 @@ msgstr ""
 "니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:939
+#: ../src/xz/xz.1:940
 msgid ""
 "If the input file is bigger than the sum of I<sizes>, the last value in "
 "I<sizes> is repeated until the end of the file.  A special value of B<0> may "
@@ -1768,7 +1768,7 @@ msgstr ""
 "다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:954
+#: ../src/xz/xz.1:955
 msgid ""
 "If one specifies I<sizes> that exceed the encoder's block size (either the "
 "default value in threaded mode or the value specified with B<--block-"
@@ -1786,7 +1786,7 @@ msgstr ""
 "4, 10, 10, 1 MiB 용량을 차지하는 블록 11개를 결과물로 내줍니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:960
+#: ../src/xz/xz.1:961
 msgid ""
 "In multi-threaded mode the sizes of the blocks are stored in the block "
 "headers.  This isn't done in single-threaded mode, so the encoded output "
@@ -1797,13 +1797,13 @@ msgstr ""
 "과는 다릅니다."
 
 #. type: TP
-#: ../src/xz/xz.1:960
+#: ../src/xz/xz.1:961
 #, no-wrap
 msgid "B<--flush-timeout=>I<timeout>"
 msgstr "B<--flush-timeout=>I<E<lt>제한시간E<gt>>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:977
+#: ../src/xz/xz.1:978
 msgid ""
 "When compressing, if more than I<timeout> milliseconds (a positive integer) "
 "has passed since the previous flush and reading more input would block, all "
@@ -1821,7 +1821,7 @@ msgstr ""
 "E<gt>> 값을 크게 하면 압축율을 높일 수 있습니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:985
+#: ../src/xz/xz.1:986
 msgid ""
 "This feature is disabled by default.  If this option is specified more than "
 "once, the last one takes effect.  The special I<timeout> value of B<0> can "
@@ -1832,13 +1832,13 @@ msgstr ""
 "이 설정을 완전히 끌 수 있습니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:987
+#: ../src/xz/xz.1:988
 msgid "This feature is not available on non-POSIX systems."
 msgstr "이 기능은 POSIX 시스템이 아닌 곳에서는 사용할 수 없습니다."
 
 #.  FIXME
 #. type: Plain text
-#: ../src/xz/xz.1:995
+#: ../src/xz/xz.1:996
 msgid ""
 "B<This feature is still experimental.> Currently B<xz> is unsuitable for "
 "decompressing the stream in real time due to how B<xz> does buffering."
@@ -1847,13 +1847,13 @@ msgstr ""
 "B<xz>의 실시간 스트림 압축 해제 기능 활용은 적절하지 않습니다."
 
 #. type: TP
-#: ../src/xz/xz.1:995
+#: ../src/xz/xz.1:996
 #, no-wrap
 msgid "B<--memlimit-compress=>I<limit>"
 msgstr "B<--memlimit-compress=>I<E<lt>제한용량E<gt>>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1000
+#: ../src/xz/xz.1:1001
 msgid ""
 "Set a memory usage limit for compression.  If this option is specified "
 "multiple times, the last one takes effect."
@@ -1862,7 +1862,7 @@ msgstr ""
 "값을 취합니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1013
+#: ../src/xz/xz.1:1014
 msgid ""
 "If the compression settings exceed the I<limit>, B<xz> will attempt to "
 "adjust the settings downwards so that the limit is no longer exceeded and "
@@ -1878,7 +1878,7 @@ msgstr ""
 "드 모드로 전환합니다. 그 다음 마지막으로 LZMA2 딕셔너리 크기를 줄입니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1021
+#: ../src/xz/xz.1:1022
 msgid ""
 "When compressing with B<--format=raw> or if B<--no-adjust> has been "
 "specified, only the number of threads may be reduced since it can be done "
@@ -1888,7 +1888,7 @@ msgstr ""
 "력에 영향을 주지 않고 스레드 처리 수만 줄일 수 있습니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1028
+#: ../src/xz/xz.1:1029
 msgid ""
 "If the I<limit> cannot be met even with the adjustments described above, an "
 "error is displayed and B<xz> will exit with exit status 1."
@@ -1897,12 +1897,12 @@ msgstr ""
 "B<xz> 명령은 종료 상태 1번을 반환하며 빠져나갑니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1032
+#: ../src/xz/xz.1:1033
 msgid "The I<limit> can be specified in multiple ways:"
 msgstr "I<E<lt>제한용량E<gt>> 값은 여러 방식으로 지정할 수 있습니다:"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1042
+#: ../src/xz/xz.1:1043
 msgid ""
 "The I<limit> can be an absolute value in bytes.  Using an integer suffix "
 "like B<MiB> can be useful.  Example: B<--memlimit-compress=80MiB>"
@@ -1911,7 +1911,7 @@ msgstr ""
 "B<MiB>와 같은 접미사를 사용하는게 좋습니다.  예: B<--memlimit-compress=80MiB>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1054
+#: ../src/xz/xz.1:1055
 msgid ""
 "The I<limit> can be specified as a percentage of total physical memory "
 "(RAM).  This can be useful especially when setting the B<XZ_DEFAULTS> "
@@ -1925,7 +1925,7 @@ msgstr ""
 "설치 용량에 따라 자동으로 늘어납니다.  예: B<--memlimit-compress=70%>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1064
+#: ../src/xz/xz.1:1065
 msgid ""
 "The I<limit> can be reset back to its default value by setting it to B<0>.  "
 "This is currently equivalent to setting the I<limit> to B<max> (no memory "
@@ -1936,7 +1936,7 @@ msgstr ""
 "상태와 동일합니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1088
+#: ../src/xz/xz.1:1089
 msgid ""
 "For 32-bit B<xz> there is a special case: if the I<limit> would be over "
 "B<4020\\ MiB>, the I<limit> is set to B<4020\\ MiB>.  On MIPS32 B<2000\\ "
@@ -1953,18 +1953,18 @@ msgstr ""
 "는 원하는대로 문제를 일으키지 않습니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1091
+#: ../src/xz/xz.1:1092
 msgid "See also the section B<Memory usage>."
 msgstr "B<메모리 활용> 섹션도 참고하십시오."
 
 #. type: TP
-#: ../src/xz/xz.1:1091
+#: ../src/xz/xz.1:1092
 #, no-wrap
 msgid "B<--memlimit-decompress=>I<limit>"
 msgstr "B<--memlimit-decompress=>I<E<lt>제한용량E<gt>>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1105
+#: ../src/xz/xz.1:1106
 msgid ""
 "Set a memory usage limit for decompression.  This also affects the B<--list> "
 "mode.  If the operation is not possible without exceeding the I<limit>, "
@@ -1978,13 +1978,13 @@ msgstr ""
 "한용량E<gt>> 옵션을 참고하십시오."
 
 #. type: TP
-#: ../src/xz/xz.1:1105
+#: ../src/xz/xz.1:1106
 #, no-wrap
 msgid "B<--memlimit-mt-decompress=>I<limit>"
 msgstr "B<--memlimit-mt-decompress=>I<E<lt>제한용량E<gt>>"
 
 #. type: Plain text
-#: ../src/xz/xz.1:1127
+#: ../src/xz/xz.1:1128
 msgid ""
 "Set a memory usage limit for multi-threaded decompression.  This can only "
 "affect the number of threads; this will never make B<xz> refuse to "
@@ -2005,7 +2005,7 @@ msgstr ""
 "안됩니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1134
+#: ../src/xz/xz.1:1135
 msgid ""
 "In contrast to the other memory usage limit options, B<--memlimit-mt-"
 "decompress=>I<limit> has a system-specific default I<limit>.  B<xz --info-"
@@ -2016,7 +2016,7 @@ msgstr ""
 "재 설정 값은 B<xz --info-memory> 명령으로 확인해볼 수 있습니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1150
+#: ../src/xz/xz.1:1151
 msgid ""
 "This option and its default value exist because without any limit the "
 "threaded decompressor could end up allocating an insane amount of memory "
@@ -2035,7 +2035,7 @@ msgstr ""
 "해제 성능을 개선하지 못합니다."
 
 #. type: Plain text
-#: ../src/xz/xz.1:1162
+#: ../src/xz/xz.1:1163
 msgid ""
 "See B<--memlimit-compress=>I<limit> for possible ways to specify the "
 "I<limit>.  Setting I<limit> to B<0> resets the I<limit> to the default "
@@ -3324,11 +3324,11 @@ msgstr "버전"
 #. type: Plain text
 #: ../src/xz/xz.1:1969
 msgid ""
-"B<xz --robot --version> will print the version number of B<xz> and liblzma "
-"in the following format:"
+"B<xz --robot --version> prints the version number of B<xz> and liblzma in "
+"the following format:"
 msgstr ""
-"B<xz --robot --version> 은 B<xz> 버전 번호와 liblzma 버전 번호를 다음 형식으"
-"로 나타냅니다:"
+"B<xz --robot --version> 은 B<xz> 와 liblzma의 버전 번호를 다음 형식으로 나타"
+"냅니다:"
 
 #. type: Plain text
 #: ../src/xz/xz.1:1971
@@ -3414,11 +3414,11 @@ msgstr "메모리 제한 정보"
 #. type: Plain text
 #: ../src/xz/xz.1:2008
 msgid ""
-"B<xz --robot --info-memory> prints a single line with three tab-separated "
+"B<xz --robot --info-memory> prints a single line with multiple tab-separated "
 "columns:"
 msgstr ""
-"B<xz --robot --info-memory> 명령은 탭으로 나뉜 컬럼 셋의 단일 행을 나타냅니"
-"다:"
+"B<xz --robot --info-memory> 명령은 탭으로 나뉜 여러 컬럼을 단일 행으로 나타냅"
+"니다:"
 
 #. type: IP
 #: ../src/xz/xz.1:2008
@@ -4916,8 +4916,8 @@ msgstr "XZ 임베디드: E<lt>https://tukaani.org/xz/embedded.htmlE<gt>"
 
 #. type: Plain text
 #: ../src/xz/xz.1:3020
-msgid "LZMA SDK: E<lt>http://7-zip.org/sdk.htmlE<gt>"
-msgstr "LZMA SDK: E<lt>http://7-zip.org/sdk.htmlE<gt>"
+msgid "LZMA SDK: E<lt>https://7-zip.org/sdk.htmlE<gt>"
+msgstr "LZMA SDK: E<lt>https://7-zip.org/sdk.htmlE<gt>"
 
 #. type: TH
 #: ../src/xzdec/xzdec.1:7
@@ -5550,3 +5550,6 @@ msgstr ""
 #: ../src/scripts/xzmore.1:55
 msgid "B<more>(1), B<xz>(1), B<xzless>(1), B<zmore>(1)"
 msgstr "B<more>(1), B<xz>(1), B<xzless>(1), B<zmore>(1)"
+
+#~ msgid "2022-12-01"
+#~ msgstr "2022-12-01"

@@ -34,7 +34,8 @@ static const uint32_t trailing_garbage_crc = 0x87081A60;
 
 // Helper function to decode a good file with no flags and plenty high memlimit
 static void
-basic_lzip_decode(const char *src, const uint32_t expected_crc) {
+basic_lzip_decode(const char *src, const uint32_t expected_crc)
+{
 	size_t file_size;
 	uint8_t *data = tuktest_file_from_srcdir(src, &file_size);
 	uint32_t checksum = 0;
@@ -56,8 +57,8 @@ basic_lzip_decode(const char *src, const uint32_t expected_crc) {
 		ret = lzma_code(&strm, LZMA_RUN);
 		if (strm.avail_out == 0) {
 			checksum = lzma_crc32(output_buffer,
-					strm.next_out - output_buffer,
-					checksum);
+				(size_t)(strm.next_out - output_buffer),
+				checksum);
 			// No need to free output_buffer because it will
 			// automatically be freed at the end of the test by
 			// tuktest.
@@ -70,7 +71,8 @@ basic_lzip_decode(const char *src, const uint32_t expected_crc) {
 	assert_lzma_ret(ret, LZMA_STREAM_END);
 	assert_uint_eq(strm.total_in, file_size);
 
-	checksum = lzma_crc32(output_buffer, strm.next_out - output_buffer,
+	checksum = lzma_crc32(output_buffer,
+			(size_t)(strm.next_out - output_buffer),
 			checksum);
 	assert_uint_eq(checksum, expected_crc);
 
@@ -94,7 +96,8 @@ test_options(void)
 
 
 static void
-test_v0_decode(void) {
+test_v0_decode(void)
+{
 	// This tests if liblzma can decode lzip version 0 files.
 	// lzip 1.17 and older can decompress this, but lzip 1.18
 	// and newer can no longer decode these files.
@@ -103,7 +106,8 @@ test_v0_decode(void) {
 
 
 static void
-test_v1_decode(void) {
+test_v1_decode(void)
+{
 	// This tests decoding a basic lzip v1 file
 	basic_lzip_decode("files/good-1-v1.lz", hello_world_crc);
 }
@@ -113,7 +117,8 @@ test_v1_decode(void) {
 // the lzip stream
 static void
 trailing_helper(const char *src, const uint32_t expected_data_checksum,
-		const uint32_t expected_trailing_checksum) {
+		const uint32_t expected_trailing_checksum)
+{
 	size_t file_size;
 	uint32_t checksum = 0;
 	uint8_t *data = tuktest_file_from_srcdir(src, &file_size);
@@ -133,8 +138,8 @@ trailing_helper(const char *src, const uint32_t expected_data_checksum,
 		ret = lzma_code(&strm, LZMA_RUN);
 		if (strm.avail_out == 0) {
 			checksum = lzma_crc32(output_buffer,
-					strm.next_out - output_buffer,
-					checksum);
+				(size_t)(strm.next_out - output_buffer),
+				checksum);
 			// No need to free output_buffer because it will
 			// automatically be freed at the end of the test by
 			// tuktest.
@@ -148,7 +153,7 @@ trailing_helper(const char *src, const uint32_t expected_data_checksum,
 	assert_uint(strm.total_in, <, file_size);
 
 	checksum = lzma_crc32(output_buffer,
-			strm.next_out - output_buffer,
+			(size_t)(strm.next_out - output_buffer),
 			checksum);
 
 	assert_uint_eq(checksum, expected_data_checksum);
@@ -198,14 +203,16 @@ decode_expect_error(const char *src, lzma_ret expected_error)
 
 
 static void
-test_v0_trailing(void) {
+test_v0_trailing(void)
+{
 	trailing_helper("files/good-1-v0-trailing-1.lz", hello_world_crc,
 			trailing_garbage_crc);
 }
 
 
 static void
-test_v1_trailing(void) {
+test_v1_trailing(void)
+{
 	trailing_helper("files/good-1-v1-trailing-1.lz", hello_world_crc,
 			trailing_garbage_crc);
 
@@ -295,7 +302,8 @@ test_concatentated(void)
 
 
 static void
-test_crc(void) {
+test_crc(void)
+{
 	// Test invalid checksum
 	lzma_stream strm = LZMA_STREAM_INIT;
 	size_t file_size;
@@ -343,7 +351,8 @@ test_crc(void) {
 
 
 static void
-test_invalid_magic_bytes(void) {
+test_invalid_magic_bytes(void)
+{
 	uint8_t lzip_id_string[] = { 0x4C, 0x5A, 0x49, 0x50 };
 	lzma_stream strm = LZMA_STREAM_INIT;
 
@@ -382,21 +391,23 @@ test_invalid_version(void)
 
 
 static void
-test_invalid_dictionary_size(void) {
+test_invalid_dictionary_size(void)
+{
 	// First file has too small dictionary size field
 	decode_expect_error("files/bad-1-v1-dict-1.lz", LZMA_DATA_ERROR);
-	
+
 	// Second file has too large dictionary size field
 	decode_expect_error("files/bad-1-v1-dict-2.lz", LZMA_DATA_ERROR);
 }
 
 
 static void
-test_invalid_uncomp_size(void) {
+test_invalid_uncomp_size(void)
+{
 	// Test invalid v0 lzip file uncomp size
 	decode_expect_error("files/bad-1-v0-uncomp-size.lz",
 			LZMA_DATA_ERROR);
-	
+
 	// Test invalid v1 lzip file uncomp size
 	decode_expect_error("files/bad-1-v1-uncomp-size.lz",
 			LZMA_DATA_ERROR);
@@ -404,14 +415,16 @@ test_invalid_uncomp_size(void) {
 
 
 static void
-test_invalid_member_size(void) {
+test_invalid_member_size(void)
+{
 	decode_expect_error("files/bad-1-v1-member-size.lz",
 			LZMA_DATA_ERROR);
 }
 
 
 static void
-test_invalid_memlimit(void) {
+test_invalid_memlimit(void)
+{
 	// A very low memlimit should prevent decoding.
 	// Should be able to update the memlimit after failing
 	size_t file_size;
