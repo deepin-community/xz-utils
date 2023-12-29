@@ -1,3 +1,50 @@
+xz-utils (5.4.5-0.3) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Source-only upload for testing eligibility.
+
+ -- Cyril Brulebois <kibi@debian.org>  Sat, 23 Dec 2023 20:05:15 +0100
+
+xz-utils (5.4.5-0.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Add liblzma5-udeb, needed for kmod to gain support for compressed
+    modules.
+
+ -- Cyril Brulebois <kibi@debian.org>  Sat, 23 Dec 2023 19:05:39 +0100
+
+xz-utils (5.4.5-0.1) unstable; urgency=medium
+
+  [ Sebastian Andrzej Siewior ]
+  * Non-maintainer upload.
+  * Import 5.4.5.
+
+  [ Helmut Grohne ]
+  * Move liblzma.so.* to /usr. (Closes: #1055942).
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Thu, 23 Nov 2023 20:54:59 +0100
+
+xz-utils (5.4.4-0.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Import 5.4.4.
+  * Don't redo translation, the patches are in the upstream release
+    (Closes: #1047952).
+  * Don't crc32 assembly on hurd-amd64. Patch by Samuel Thibault
+    (Closes: #1035615).
+  * Update doxygen generation for public API.
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Wed, 30 Aug 2023 20:38:53 +0200
+
+xz-utils (5.4.1-0.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Increase replaces/breaks relationship with manpages-{de|fr}
+    (Closes: #1028375).
+  * Add da.po translation translation from manpages-l10n (Closes: #1029349).
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Sun, 12 Feb 2023 21:22:50 +0100
+
 xz-utils (5.4.1-0.1) unstable; urgency=medium
 
   * Non-maintainer upload.

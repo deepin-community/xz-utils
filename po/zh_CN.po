@@ -1,14 +1,14 @@
 # Chinese translations for xz package
 # xz 软件包的简体中文翻译。
 # This file is put in the public domain.
-# Boyuan Yang <073plan@gmail.com>, 2019, 2022.
+# Boyuan Yang <073plan@gmail.com>, 2019, 2022, 2023.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xz 5.4.0-pre1\n"
+"Project-Id-Version: xz 5.4.4-pre1\n"
 "Report-Msgid-Bugs-To: xz@tukaani.org\n"
-"POT-Creation-Date: 2023-01-11 19:01+0200\n"
-"PO-Revision-Date: 2022-11-30 13:31-0500\n"
+"POT-Creation-Date: 2023-10-31 22:33+0800\n"
+"PO-Revision-Date: 2023-07-19 14:24-0400\n"
 "Last-Translator: Boyuan Yang <073plan@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Bugs: Report translation errors to the Language-Team address.\n"
-"X-Generator: Poedit 3.2\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: src/xz/args.c:77
 #, c-format
@@ -36,7 +36,7 @@ msgstr "0 仅可用于 --block-list 的最后一个元素"
 #: src/xz/args.c:451
 #, c-format
 msgid "%s: Unknown file format type"
-msgstr "%s：位置文件格式类型"
+msgstr "%s：未知文件格式类型"
 
 #: src/xz/args.c:474 src/xz/args.c:482
 #, c-format
@@ -47,85 +47,100 @@ msgstr "%s：不支持的完整性检查类型"
 msgid "Only one file can be specified with `--files' or `--files0'."
 msgstr "仅可使用“--files”或“--files0”指定一个文件。"
 
-#: src/xz/args.c:586
+#. TRANSLATORS: This is a translatable
+#. string because French needs a space
+#. before the colon ("%s : %s").
+#: src/xz/args.c:533 src/xz/coder.c:692 src/xz/coder.c:708 src/xz/coder.c:968
+#: src/xz/coder.c:971 src/xz/file_io.c:605 src/xz/file_io.c:679
+#: src/xz/file_io.c:769 src/xz/file_io.c:940 src/xz/list.c:369
+#: src/xz/list.c:415 src/xz/list.c:477 src/xz/list.c:581 src/xz/list.c:590
+#, c-format
+msgid "%s: %s"
+msgstr "%s：%s"
+
+#: src/xz/args.c:589
 #, c-format
 msgid "The environment variable %s contains too many arguments"
 msgstr "环境变量 %s 包含过多参数"
 
-#: src/xz/args.c:688
+#: src/xz/args.c:691
 msgid "Compression support was disabled at build time"
 msgstr "压缩支持已在构建时禁用"
 
-#: src/xz/args.c:695
+#: src/xz/args.c:698
 msgid "Decompression support was disabled at build time"
 msgstr "解压支持已在构建时禁用"
 
-#: src/xz/args.c:701
+#: src/xz/args.c:704
 msgid "Compression of lzip files (.lz) is not supported"
 msgstr "不支持对 lzip 文件 (.lz) 的压缩"
+
+#: src/xz/args.c:735
+msgid "With --format=raw, --suffix=.SUF is required unless writing to stdout"
+msgstr "启用 --format-raw 选项时，必须指定 --suffix=.SUF 获知写入至标准输出"
 
 #: src/xz/coder.c:115
 msgid "Maximum number of filters is four"
 msgstr "过滤器最多数量为四"
 
-#: src/xz/coder.c:134
+#: src/xz/coder.c:135
 msgid "Memory usage limit is too low for the given filter setup."
 msgstr "内存用量限制对指定过滤器设置过低。"
 
-#: src/xz/coder.c:169
+#: src/xz/coder.c:170
 msgid "Using a preset in raw mode is discouraged."
 msgstr "不推荐在 raw 模式使用预设等级。"
 
-#: src/xz/coder.c:171
+#: src/xz/coder.c:172
 msgid "The exact options of the presets may vary between software versions."
 msgstr "各个预设等级所使用的准确选项列表在不同软件版本之间可能不同。"
 
-#: src/xz/coder.c:194
+#: src/xz/coder.c:195
 msgid "The .lzma format supports only the LZMA1 filter"
 msgstr ".lzma 格式只支持 LZMA1 过滤器"
 
-#: src/xz/coder.c:202
+#: src/xz/coder.c:203
 msgid "LZMA1 cannot be used with the .xz format"
 msgstr "LZMA1 无法用于 .xz 格式"
 
-#: src/xz/coder.c:219
+#: src/xz/coder.c:220
 msgid "The filter chain is incompatible with --flush-timeout"
 msgstr "过滤器链和 --flush-timeout 不兼容"
 
-#: src/xz/coder.c:225
+#: src/xz/coder.c:226
 msgid "Switching to single-threaded mode due to --flush-timeout"
 msgstr "因 --flush-timeout 而切换至单线程模式"
 
-#: src/xz/coder.c:249
+#: src/xz/coder.c:250
 #, c-format
 msgid "Using up to %<PRIu32> threads."
 msgstr "使用最多 %<PRIu32> 个线程。"
 
-#: src/xz/coder.c:265
+#: src/xz/coder.c:266
 msgid "Unsupported filter chain or filter options"
 msgstr "不支持的过滤器链或过滤器选项"
 
-#: src/xz/coder.c:277
+#: src/xz/coder.c:278
 #, c-format
 msgid "Decompression will need %s MiB of memory."
 msgstr "解压缩需要 %s MiB 的内存。"
 
-#: src/xz/coder.c:309
+#: src/xz/coder.c:310
 #, c-format
 msgid "Reduced the number of threads from %s to %s to not exceed the memory usage limit of %s MiB"
 msgstr "已将所使用的线程数从 %s 减小为 %s，以不超出 %s MiB 的内存用量限制"
 
-#: src/xz/coder.c:329
+#: src/xz/coder.c:330
 #, c-format
 msgid "Reduced the number of threads from %s to one. The automatic memory usage limit of %s MiB is still being exceeded. %s MiB of memory is required. Continuing anyway."
 msgstr "已将所使用的线程数从 %s 减小为 1。这仍然超出了自动的内存使用限制 %s MiB。需要 %s MiB 的内存。继续操作。"
 
-#: src/xz/coder.c:356
+#: src/xz/coder.c:357
 #, c-format
 msgid "Switching to single-threaded mode to not exceed the memory usage limit of %s MiB"
 msgstr "正在切换到单线程模式以不超出 %s MiB 的内存用量限制"
 
-#: src/xz/coder.c:411
+#: src/xz/coder.c:412
 #, c-format
 msgid "Adjusted LZMA%c dictionary size from %s MiB to %s MiB to not exceed the memory usage limit of %s MiB"
 msgstr "已调整 LZMA%c 字典大小（从 %s MiB 调整为 %s MiB），以不超出 %s MiB 的内存用量限制"
@@ -135,11 +150,11 @@ msgstr "已调整 LZMA%c 字典大小（从 %s MiB 调整为 %s MiB），以不�
 msgid "Error creating a pipe: %s"
 msgstr "创建管道时出错：%s"
 
-#: src/xz/file_io.c:235
+#: src/xz/file_io.c:252
 msgid "Failed to enable the sandbox"
 msgstr "沙盒启用失败"
 
-#: src/xz/file_io.c:277
+#: src/xz/file_io.c:294
 #, c-format
 msgid "%s: poll() failed: %s"
 msgstr "%s：poll() 失败：%s"
@@ -154,111 +169,111 @@ msgstr "%s：poll() 失败：%s"
 #. it is possible that the user has put a new file in place
 #. of the original file, and in that case it obviously
 #. shouldn't be removed.
-#: src/xz/file_io.c:344
+#: src/xz/file_io.c:361
 #, c-format
 msgid "%s: File seems to have been moved, not removing"
 msgstr "%s：文件似乎已移动，不再进行删除操作"
 
-#: src/xz/file_io.c:351 src/xz/file_io.c:907
+#: src/xz/file_io.c:368 src/xz/file_io.c:924
 #, c-format
 msgid "%s: Cannot remove: %s"
 msgstr "%s：无法删除：%s"
 
-#: src/xz/file_io.c:377
+#: src/xz/file_io.c:394
 #, c-format
 msgid "%s: Cannot set the file owner: %s"
 msgstr "%s：无法设置文件所有者：%s"
 
-#: src/xz/file_io.c:390
+#: src/xz/file_io.c:407
 #, c-format
 msgid "%s: Cannot set the file group: %s"
 msgstr "%s：无法设置文件所有组：%s"
 
-#: src/xz/file_io.c:409
+#: src/xz/file_io.c:426
 #, c-format
 msgid "%s: Cannot set the file permissions: %s"
 msgstr "%s：无法设置文件权限：%s"
 
-#: src/xz/file_io.c:535
+#: src/xz/file_io.c:552
 #, c-format
 msgid "Error getting the file status flags from standard input: %s"
 msgstr "从标准输入获取文件状态标志出错：%s"
 
-#: src/xz/file_io.c:593 src/xz/file_io.c:655
+#: src/xz/file_io.c:610 src/xz/file_io.c:672
 #, c-format
 msgid "%s: Is a symbolic link, skipping"
 msgstr "%s：是符号链接，跳过"
 
-#: src/xz/file_io.c:684
+#: src/xz/file_io.c:701
 #, c-format
 msgid "%s: Is a directory, skipping"
 msgstr "%s：是目录，跳过"
 
-#: src/xz/file_io.c:690
+#: src/xz/file_io.c:707
 #, c-format
 msgid "%s: Not a regular file, skipping"
 msgstr "%s：不是标准文件，跳过"
 
-#: src/xz/file_io.c:707
+#: src/xz/file_io.c:724
 #, c-format
 msgid "%s: File has setuid or setgid bit set, skipping"
 msgstr "%s：文件有设置用户ID或设置组ID标识，跳过"
 
-#: src/xz/file_io.c:714
+#: src/xz/file_io.c:731
 #, c-format
 msgid "%s: File has sticky bit set, skipping"
 msgstr "%s：文件有粘滞位标识，跳过"
 
-#: src/xz/file_io.c:721
+#: src/xz/file_io.c:738
 #, c-format
 msgid "%s: Input file has more than one hard link, skipping"
 msgstr "%s：输入文件有多于一个硬链接，跳过"
 
-#: src/xz/file_io.c:763
+#: src/xz/file_io.c:780
 msgid "Empty filename, skipping"
 msgstr "空文件名，跳过"
 
-#: src/xz/file_io.c:817
+#: src/xz/file_io.c:834
 #, c-format
 msgid "Error restoring the status flags to standard input: %s"
 msgstr "回复标准输入的状态标志时出错：%s"
 
-#: src/xz/file_io.c:865
+#: src/xz/file_io.c:882
 #, c-format
 msgid "Error getting the file status flags from standard output: %s"
 msgstr "获取标准输出的文件状态标志时出错：%s"
 
-#: src/xz/file_io.c:1043
+#: src/xz/file_io.c:1081
 #, c-format
 msgid "Error restoring the O_APPEND flag to standard output: %s"
 msgstr "恢复标准输出的 O_APPEND 标志时出错：%s"
 
-#: src/xz/file_io.c:1055
+#: src/xz/file_io.c:1093
 #, c-format
 msgid "%s: Closing the file failed: %s"
 msgstr "%s：关闭文件失败：%s"
 
-#: src/xz/file_io.c:1091 src/xz/file_io.c:1354
+#: src/xz/file_io.c:1129 src/xz/file_io.c:1391
 #, c-format
 msgid "%s: Seeking failed when trying to create a sparse file: %s"
 msgstr "%s：尝试创建稀疏文件时 seek 失败：%s"
 
-#: src/xz/file_io.c:1192
+#: src/xz/file_io.c:1229
 #, c-format
 msgid "%s: Read error: %s"
 msgstr "%s：读取错误：%s"
 
-#: src/xz/file_io.c:1222
+#: src/xz/file_io.c:1259
 #, c-format
 msgid "%s: Error seeking the file: %s"
 msgstr "%s：seek 文件时出错：%s"
 
-#: src/xz/file_io.c:1246
+#: src/xz/file_io.c:1283
 #, c-format
 msgid "%s: Unexpected end of file"
 msgstr "%s：未预期的文件结束"
 
-#: src/xz/file_io.c:1305
+#: src/xz/file_io.c:1342
 #, c-format
 msgid "%s: Write error: %s"
 msgstr "%s：写入错误：%s"
@@ -477,40 +492,40 @@ msgstr "%s：过小而不是有效的 .xz 文件"
 #. to Ratio, the columns are right aligned. Check and Filename
 #. are left aligned. If you need longer words, it's OK to
 #. use two lines here. Test with "xz -l foo.xz".
-#: src/xz/list.c:730
+#: src/xz/list.c:731
 msgid "Strms  Blocks   Compressed Uncompressed  Ratio  Check   Filename"
 msgstr "   流      块     压缩大小     解压大小   比例  校验    文件名"
 
-#: src/xz/list.c:1025 src/xz/list.c:1203
+#: src/xz/list.c:1026 src/xz/list.c:1204
 msgid "Yes"
 msgstr "是"
 
-#: src/xz/list.c:1025 src/xz/list.c:1203
+#: src/xz/list.c:1026 src/xz/list.c:1204
 msgid "No"
 msgstr "否"
 
-#: src/xz/list.c:1027 src/xz/list.c:1205
+#: src/xz/list.c:1028 src/xz/list.c:1206
 #, c-format
 msgid "  Minimum XZ Utils version: %s\n"
 msgstr "  最低 XZ Utils 版本：%s\n"
 
 #. TRANSLATORS: %s is an integer. Only the plural form of this
 #. message is used (e.g. "2 files"). Test with "xz -l foo.xz bar.xz".
-#: src/xz/list.c:1178
+#: src/xz/list.c:1179
 #, c-format
 msgid "%s file\n"
 msgid_plural "%s files\n"
 msgstr[0] "%s 文件\n"
 
-#: src/xz/list.c:1191
+#: src/xz/list.c:1192
 msgid "Totals:"
 msgstr "总计："
 
-#: src/xz/list.c:1269
+#: src/xz/list.c:1270
 msgid "--list works only on .xz files (--format=xz or --format=auto)"
 msgstr "--list 仅适用于 .xz 文件（--format=xz 或 --format=auto）"
 
-#: src/xz/list.c:1275
+#: src/xz/list.c:1276
 msgid "--list does not support reading from standard input"
 msgstr "--list 不支持从标准输入读取"
 
@@ -541,7 +556,7 @@ msgstr "无法同时从标准输入读取数据和文件名列表"
 #. of the line in messages. Usually it becomes "xz: ".
 #. This is a translatable string because French needs
 #. a space before a colon.
-#: src/xz/message.c:725
+#: src/xz/message.c:670 src/xz/message.c:725
 #, c-format
 msgid "%s: "
 msgstr "%s："
@@ -943,59 +958,54 @@ msgstr "%s：无效的选项名称"
 msgid "%s: Invalid option value"
 msgstr "%s：无效的选项值"
 
-#: src/xz/options.c:247
+#: src/xz/options.c:248
 #, c-format
 msgid "Unsupported LZMA1/LZMA2 preset: %s"
 msgstr "不支持的 LZMA1/LZMA2 预设等级：%s"
 
-#: src/xz/options.c:355
+#: src/xz/options.c:356
 msgid "The sum of lc and lp must not exceed 4"
 msgstr "lc 和 lp 的和必须不大于 4"
 
-#: src/xz/suffix.c:137 src/xz/suffix.c:268
-#, c-format
-msgid "%s: With --format=raw, --suffix=.SUF is required unless writing to stdout"
-msgstr "%s：在启用 --format-raw 选项时，必须指定 --suffix=.SUF 获知写入至标准输出"
-
-#: src/xz/suffix.c:168
+#: src/xz/suffix.c:160
 #, c-format
 msgid "%s: Filename has an unknown suffix, skipping"
 msgstr "%s：文件名有未知后缀，跳过"
 
-#: src/xz/suffix.c:189
+#: src/xz/suffix.c:181
 #, c-format
 msgid "%s: File already has `%s' suffix, skipping"
 msgstr "%s：文件已有“%s”后缀名，跳过"
 
-#: src/xz/suffix.c:405
+#: src/xz/suffix.c:388
 #, c-format
 msgid "%s: Invalid filename suffix"
 msgstr "%s：无效的文件名后缀"
 
-#: src/xz/util.c:71
+#: src/xz/util.c:107
 #, c-format
 msgid "%s: Value is not a non-negative decimal integer"
 msgstr "%s：值不是非负十进制整数"
 
-#: src/xz/util.c:113
+#: src/xz/util.c:149
 #, c-format
 msgid "%s: Invalid multiplier suffix"
 msgstr "%s：无效的乘数后缀"
 
-#: src/xz/util.c:115
+#: src/xz/util.c:151
 msgid "Valid suffixes are `KiB' (2^10), `MiB' (2^20), and `GiB' (2^30)."
 msgstr "有效的后缀包括“KiB”（2^10）、“MiB”（2^20）和“GiB”（2^30）。"
 
-#: src/xz/util.c:132
+#: src/xz/util.c:168
 #, c-format
 msgid "Value of the option `%s' must be in the range [%<PRIu64>, %<PRIu64>]"
 msgstr "选项“%s”的值必须位于 [%<PRIu64>, %<PRIu64>] 范围内"
 
-#: src/xz/util.c:269
+#: src/xz/util.c:270
 msgid "Compressed data cannot be read from a terminal"
 msgstr "压缩数据不能从终端读取"
 
-#: src/xz/util.c:282
+#: src/xz/util.c:283
 msgid "Compressed data cannot be written to a terminal"
 msgstr "压缩数据不能向终端写入"
 
@@ -1007,7 +1017,6 @@ msgstr "写入标准输出失败"
 msgid "Unknown error"
 msgstr "未知错误"
 
-#, c-format
 #~ msgid "The selected match finder requires at least nice=%<PRIu32>"
 #~ msgstr "所选中的匹配搜索器（match finder）至少需要 nice=%<PRIu32>"
 

@@ -437,14 +437,6 @@ case $enable_threads in
 		;;
 esac
 
-# The Win95 threading lacks thread-safe one-time initialization function.
-# It's better to disallow it instead of allowing threaded but thread-unsafe
-# build.
-if test "x$enable_small$enable_threads" = xyeswin95; then
-	AC_MSG_ERROR([--enable-threads=win95 and --enable-small cannot be
-		used at the same time])
-fi
-
 # We use the actual result a little later.
 
 
@@ -596,12 +588,15 @@ echo "Initializing Automake:"
 
 # We don't use "subdir-objects" yet because it breaks "make distclean" when
 # dependencies are enabled (as of Automake 1.14.1) due to this bug:
-# http://debbugs.gnu.org/cgi/bugreport.cgi?bug=17354
+# https://debbugs.gnu.org/cgi/bugreport.cgi?bug=17354
 # The -Wno-unsupported is used to silence warnings about missing
 # "subdir-objects".
 AM_INIT_AUTOMAKE([1.12 foreign tar-v7 filename-length-max=99 -Wno-unsupported])
 AC_PROG_LN_S
 
+dnl # Autoconf >= 2.70 warns that AC_PROG_CC_C99 is obsolete. However,
+dnl # we have to keep using AC_PROG_CC_C99 instead of AC_PROG_CC
+dnl # as long as we try to be compatible with Autoconf 2.69.
 AC_PROG_CC_C99
 if test x$ac_cv_prog_cc_c99 = xno ; then
 	AC_MSG_ERROR([No C99 compiler was found.])
@@ -611,8 +606,8 @@ AM_PROG_CC_C_O
 AM_PROG_AS
 AC_USE_SYSTEM_EXTENSIONS
 
-case $enable_threads in
-	posix)
+AS_CASE([$enable_threads],
+	[posix], [
 		echo
 		echo "POSIX threading support:"
 		AX_PTHREAD([:]) dnl We don't need the HAVE_PTHREAD macro.
@@ -643,19 +638,19 @@ case $enable_threads in
 			`CLOCK_MONOTONIC' is declared in <time.h>.])], [],
 			[[#include <time.h>]])
 		CFLAGS=$OLD_CFLAGS
-		;;
-	win95)
+	],
+	[win95], [
 		AC_DEFINE([MYTHREAD_WIN95], [1], [Define to 1 when using
 			Windows 95 (and thus XP) compatible threads.
 			This avoids use of features that were added in
 			Windows Vista.])
-		;;
-	vista)
+	],
+	[vista], [
 		AC_DEFINE([MYTHREAD_VISTA], [1], [Define to 1 when using
 			Windows Vista compatible threads. This uses
 			features that are not available on Windows XP.])
-		;;
-esac
+	]
+)
 AM_CONDITIONAL([COND_THREADS], [test "x$enable_threads" != xno])
 
 echo
@@ -708,7 +703,7 @@ fi
 # used when creating a static library.
 #
 # Libtool always uses -DPIC when building shared libraries by default and
-# doesn't use it for static libs by default. This can be overriden with
+# doesn't use it for static libs by default. This can be overridden with
 # --with-pic and --without-pic though. As long as neither --with-pic nor
 # --without-pic is used then we can use #ifdef PIC to detect if the file is
 # being built for a shared library.
@@ -719,8 +714,16 @@ elif test "x$enable_shared" = xno ; then
 	enable_symbol_versions=no
 	AC_MSG_RESULT([no (not building a shared library)])
 else
-	case $host_os in
-		linux*)
+	case "$host_cpu-$host_os" in
+		microblaze*)
+			# GCC 12 on MicroBlaze doesn't support __symver__
+			# attribute. It's simplest and safest to use the
+			# generic version on that platform since then only
+			# the linker script is needed. The RHEL/CentOS 7
+			# compatibility symbols don't matter on MicroBlaze.
+			enable_symbol_versions=generic
+			;;
+		*-linux*)
 			case "$pic_mode-$enable_static" in
 				default-*)
 					# Use symvers if PIC is defined.
@@ -829,17 +832,22 @@ AC_C_BIGENDIAN
 
 # __attribute__((__constructor__)) can be used for one-time initializations.
 # Use -Werror because some compilers accept unknown attributes and just
-# give a warning. If it works this should give no warnings, even
-# clang -Weverything should be fine.
-# dnl This doesn't need AC_LANG_SOURCE, minimal code is enough.
+# give a warning.
+#
+# FIXME? Unfortunately -Werror can cause trouble if CFLAGS contains options
+# that produce warnings for unrelated reasons. For example, GCC and Clang
+# support -Wunused-macros which will warn about "#define _GNU_SOURCE 1"
+# which will be among the #defines that Autoconf inserts to the beginning of
+# the test program. There seems to be no nice way to prevent Autoconf from
+# inserting the any defines to the test program.
 AC_MSG_CHECKING([if __attribute__((__constructor__)) can be used])
 have_func_attribute_constructor=no
 OLD_CFLAGS="$CFLAGS"
 CFLAGS="$CFLAGS -Werror"
-AC_COMPILE_IFELSE([
+AC_COMPILE_IFELSE([AC_LANG_SOURCE([[
 	__attribute__((__constructor__))
 	static void my_constructor_func(void) { return; }
-], [
+]])], [
 	AC_DEFINE([HAVE_FUNC_ATTRIBUTE_CONSTRUCTOR], [1],
 		[Define to 1 if __attribute__((__constructor__))
 		is supported for functions.])
@@ -850,6 +858,20 @@ AC_COMPILE_IFELSE([
 ])
 CFLAGS="$OLD_CFLAGS"
 
+
+# The Win95 threading lacks a thread-safe one-time initialization function.
+# The one-time initialization is needed for crc32_small.c and crc64_small.c
+# create the CRC tables. So if small mode is enabled, the threading mode is
+# win95, and the compiler does not support attribute constructor, then we
+# would end up with a multithreaded build that is thread-unsafe. As a
+# result this configuration is not allowed.
+if test "x$enable_small$enable_threads$have_func_attribute_constructor" \
+		= xyeswin95no; then
+	AC_MSG_ERROR([
+    --enable-threads=win95 and --enable-small cannot be used
+    at the same time with a compiler that doesn't support
+    __attribute__((__constructor__))])
+fi
 
 ###############################################################################
 # Checks for library functions.
@@ -887,7 +909,7 @@ TUKLIB_MBSTR
 sha256_header_found=no
 sha256_type_found=no
 sha256_func_found=no
-if test "x$enable_external_sha256" = "xyes"; then
+AS_IF([test "x$enable_external_sha256" = "xyes"], [
 	# Test for Common Crypto before others, because Darwin has sha256.h
 	# too and we don't want to use that, because on older versions it
 	# uses OpenSSL functions, whose SHA256_Init is not guaranteed to
@@ -917,7 +939,7 @@ if test "x$enable_external_sha256" = "xyes"; then
 				[sha256_func_found=yes ; break])
 		fi
 	fi
-fi
+])
 AM_CONDITIONAL([COND_INTERNAL_SHA256], [test "x$sha256_func_found" = xno])
 if test "x$enable_external_sha256$sha256_func_found" = xyesno; then
 	AC_MSG_ERROR([--enable-external-sha256 was specified but no supported external SHA-256 implementation was found])
@@ -950,9 +972,9 @@ AC_CHECK_DECL([_mm_movemask_epi8],
 # If everything above is supported, runtime detection will be used to keep the
 # binaries working on systems that don't support the required extensions.
 AC_MSG_CHECKING([if _mm_clmulepi64_si128 is usable])
-if test "x$enable_clmul_crc" = xno ; then
+AS_IF([test "x$enable_clmul_crc" = xno], [
 	AC_MSG_RESULT([no, --disable-clmul-crc was used])
-else
+], [
 	AC_COMPILE_IFELSE([AC_LANG_SOURCE([[
 #include <immintrin.h>
 
@@ -981,19 +1003,19 @@ __m128i my_clmul(__m128i a)
 	], [
 		AC_MSG_RESULT([no])
 	])
-fi
+])
 
 # Check for sandbox support. If one is found, set enable_sandbox=found.
-case $enable_sandbox in
-	auto | capsicum)
+AS_CASE([$enable_sandbox],
+	[auto | capsicum], [
 		AX_CHECK_CAPSICUM([enable_sandbox=found], [:])
-		;;
-esac
-case $enable_sandbox in
-	auto | pledge)
+	]
+)
+AS_CASE([$enable_sandbox],
+	[auto | pledge], [
 		AC_CHECK_FUNCS([pledge], [enable_sandbox=found ; break])
-		;;
-esac
+	]
+)
 
 # If a specific sandboxing method was explicitly requested and it wasn't
 # found, give an error.
@@ -1022,47 +1044,72 @@ if test -n "$CFLAG_VISIBILITY" && test "$is_w32" = no; then
 	AM_CFLAGS="$AM_CFLAGS $CFLAG_VISIBILITY"
 fi
 
-if test "$GCC" = yes ; then
+AS_IF([test "$GCC" = yes], [
 	# Enable as much warnings as possible. These commented warnings won't
 	# work for this package though:
 	#   * -Wunreachable-code breaks several assert(0) cases, which are
 	#     backed up with "return LZMA_PROG_ERROR".
 	#   * -Wcast-qual would break various things where we need a non-const
 	#     pointer although we don't modify anything through it.
-	#   * -Wcast-align breaks optimized CRC32 and CRC64 implementation
-	#     on some architectures (not on x86), where this warning is bogus,
-	#     because we take care of correct alignment.
 	#   * -Winline, -Wdisabled-optimization, -Wunsafe-loop-optimizations
 	#     don't seem so useful here; at least the last one gives some
 	#     warnings which are not bugs.
+	#   * -Wconversion still shows too many warnings.
+	#
+	# The flags before the empty line are for GCC and many of them
+	# are supported by Clang too. The flags after the empty line are
+	# for Clang.
 	for NEW_FLAG in \
 			-Wall \
 			-Wextra \
 			-Wvla \
+			-Wc99-c11-compat \
 			-Wformat=2 \
 			-Winit-self \
 			-Wmissing-include-dirs \
-			-Wstrict-aliasing \
+			-Wshift-overflow=2 \
+			-Wstrict-overflow=3 \
+			-Walloc-zero \
+			-Wduplicated-cond \
 			-Wfloat-equal \
 			-Wundef \
 			-Wshadow \
 			-Wpointer-arith \
 			-Wbad-function-cast \
 			-Wwrite-strings \
+			-Wdate-time \
+			-Wsign-conversion \
+			-Wfloat-conversion \
 			-Wlogical-op \
 			-Waggregate-return \
 			-Wstrict-prototypes \
 			-Wold-style-definition \
 			-Wmissing-prototypes \
 			-Wmissing-declarations \
-			-Wmissing-noreturn \
-			-Wredundant-decls
+			-Wredundant-decls \
+			\
+			-Wc99-compat \
+			-Wc11-extensions \
+			-Wc2x-compat \
+			-Wc2x-extensions \
+			-Wpre-c2x-compat \
+			-Warray-bounds-pointer-arithmetic \
+			-Wassign-enum \
+			-Wconditional-uninitialized \
+			-Wdocumentation \
+			-Wduplicate-enum \
+			-Wempty-translation-unit \
+			-Wflexible-array-extensions \
+			-Wmissing-variable-declarations \
+			-Wnewline-eof \
+			-Wshift-sign-overflow \
+			-Wstring-conversion
 	do
 		AC_MSG_CHECKING([if $CC accepts $NEW_FLAG])
 		OLD_CFLAGS="$CFLAGS"
 		CFLAGS="$CFLAGS $NEW_FLAG -Werror"
 		AC_COMPILE_IFELSE([AC_LANG_SOURCE(
-				[void foo(void); void foo(void) { }])], [
+				[[void foo(void); void foo(void) { }]])], [
 			AM_CFLAGS="$AM_CFLAGS $NEW_FLAG"
 			AC_MSG_RESULT([yes])
 		], [
@@ -1078,7 +1125,7 @@ if test "$GCC" = yes ; then
 	if test "x$enable_werror" = "xyes"; then
 		AM_CFLAGS="$AM_CFLAGS -Werror"
 	fi
-fi
+])
 
 
 ###############################################################################
@@ -1099,7 +1146,6 @@ xz=`echo xz | sed "$program_transform_name"`
 AC_SUBST([xz])
 
 AC_CONFIG_FILES([
-	Doxyfile
 	Makefile
 	po/Makefile.in
 	lib/Makefile
