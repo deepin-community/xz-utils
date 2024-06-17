@@ -1,9 +1,12 @@
+.\" SPDX-License-Identifier: 0BSD
 .\"
 .\" Authors: Andrew Dudman
 .\"          Lasse Collin
 .\"
-.\" This file has been put into the public domain.
-.\" You can do whatever you want with this file.
+.\" french translation of XZ Utils man
+.\" Copyright (C) 2021 Debian French l10n team <debian-l10n-french@lists.debian.org>
+.\"  Translator
+.\" bubu <bubub@no-log.org>, 2021.
 .\"
 .\" (Note that this file is not based on gzip's zless.1.)
 .\"
@@ -12,7 +15,7 @@
 .\" This file was generated with po4a. Translate the source file.
 .\"
 .\"*******************************************************************
-.TH XZLESS 1 27\-09\-2010 Tukaani "Utilitaires XZ"
+.TH XZLESS 1 2024\-02\-12 Tukaani "Utilitaires XZ"
 .SH NOM
 xzless, lzless \- Voir le contenu des fichiers (texte) compressés xz ou lzma
 .SH SYNOPSIS
@@ -20,10 +23,10 @@ xzless, lzless \- Voir le contenu des fichiers (texte) compressés xz ou lzma
 .br
 \fBlzless\fP [\fIfichier\fP...]
 .SH DESCRIPTION
-\fBxzless\fP est un filtre qui affiche le contenu de fichiers compressés dans
-un terminal. Cela fonctionne avec les fichiers compressés avec \fBxz\fP(1) ou
-\fBlzma\fP(1). Si aucun \fIfichier\fP n'est donné, \fBxzless\fP lit depuis l'entrée
-standard.
+\fBxzless\fP is a filter that displays text from compressed files to a
+terminal.  Files supported by \fBxz\fP(1)  are decompressed; other files are
+assumed to be in uncompressed form already.  If no \fIfiles\fP are given,
+\fBxzless\fP reads from standard input.
 .PP
 \fBxzless\fP utilise \fBless\fP(1) pour afficher sa sortie. Contrairement à
 \fBxzmore\fP, son choix d'afficheur ne peut pas être modifié en indiquant une

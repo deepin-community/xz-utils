@@ -1,9 +1,11 @@
+.\" SPDX-License-Identifier: 0BSD
 .\"
 .\" Authors: Andrew Dudman
 .\"          Lasse Collin
 .\"
-.\" This file has been put into the public domain.
-.\" You can do whatever you want with this file.
+.\" Brazilian Portuguese translations for xz package
+.\" Traduções em português brasileiro para o pacote xz.
+.\" Rafael Fontenelle <rafaelff@gnome.org>, 2022-2023.
 .\"
 .\" (Note that this file is not based on gzip's zless.1.)
 .\"
@@ -12,7 +14,7 @@
 .\" This file was generated with po4a. Translate the source file.
 .\"
 .\"*******************************************************************
-.TH XZLESS 1 2010\-09\-27 Tukaani "XZ Utils"
+.TH XZLESS 1 2024\-02\-12 Tukaani "XZ Utils"
 .SH NOME
 xzless, lzless \- visualiza arquivos (texto) compactados em xz ou lzma
 .SH SINOPSE
@@ -20,10 +22,10 @@ xzless, lzless \- visualiza arquivos (texto) compactados em xz ou lzma
 .br
 \fBlzless\fP [\fIarquivo\fP...]
 .SH DESCRIÇÃO
-\fBxzless\fP é um filtro que exibe texto de arquivos compactados em um
-terminal. Ele funciona em arquivos compactados com \fBxz\fP(1) ou
-\fBlzma\fP(1). Se nenhum \fIfiles\fP for fornecido, \fBxzless\fP lê da entrada
-padrão.
+\fBxzless\fP is a filter that displays text from compressed files to a
+terminal.  Files supported by \fBxz\fP(1)  are decompressed; other files are
+assumed to be in uncompressed form already.  If no \fIfiles\fP are given,
+\fBxzless\fP reads from standard input.
 .PP
 \fBxzless\fP usa \fBless\fP(1) para apresentar sua saída. Ao contrário de
 \fBxzmore\fP, sua escolha de pager não pode ser alterada pela configuração de
