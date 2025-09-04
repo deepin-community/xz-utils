@@ -1,9 +1,95 @@
-xz-utils (5.4.5-0.3) unstable; urgency=medium
+xz-utils (5.8.1-1) unstable; urgency=medium
+
+  * Import 5.8.1
+    - Threaded .xz decoder frees memory too early (CVE-2025-31115)
+  * Upload to unstable
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Thu, 03 Apr 2025 23:02:58 +0200
+
+xz-utils (5.8.0-1) experimental; urgency=medium
+
+  * Import 5.8.0
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Wed, 26 Mar 2025 23:01:15 +0100
+
+xz-utils (5.6.4-1) unstable; urgency=medium
+
+  * Import 5.6.4
+  * Sync output file before removing source file (Closes: #814089).
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Sat, 01 Mar 2025 21:52:57 +0100
+
+xz-utils (5.6.3-1) unstable; urgency=medium
+
+  * Import 5.6.3
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Thu, 24 Oct 2024 21:27:12 +0200
+
+xz-utils (5.6.2-2) unstable; urgency=medium
+
+  * Increase symbol dependency on 5.6.0 symbols to 5.6.2 due to the revert.
+    Thanks to Ben Hutchings (Closes: #1074602).
+  * Correct the `terse' build. Thanks to Ben Hutchings (Closes: #1074604).
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Wed, 03 Jul 2024 21:51:43 +0200
+
+xz-utils (5.6.2-1) unstable; urgency=medium
+
+  * Import 5.6.2
+  * Takeover maintenance of the package.
+  * Revert the debian/ mostly to what was in 5.6.1-1
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Sat, 15 Jun 2024 10:42:31 +0200
+
+xz-utils (5.6.1+really5.4.5-1) unstable; urgency=critical
+
+  * Non-maintainer upload by the Security Team.
+  * Revert back to the 5.4.5-0.2 version
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 28 Mar 2024 15:59:38 +0100
+
+xz-utils (5.6.1-1) unstable; urgency=medium
 
   * Non-maintainer upload.
-  * Source-only upload for testing eligibility.
+  * Import 5.6.1 (Closes: #1067708).
+  * Takeover maintenance of the package.
 
- -- Cyril Brulebois <kibi@debian.org>  Sat, 23 Dec 2023 20:05:15 +0100
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Wed, 27 Mar 2024 22:53:21 +0100
+
+xz-utils (5.6.0-0.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Move xz's output of reduced threads to debug output.
+  * Add missing RISC-V on the filter list in the man page.
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Wed, 28 Feb 2024 20:03:45 +0100
+
+xz-utils (5.6.0-0.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Import 5.6.0
+  * Add Breaks on pristine-tar because of the different default behaviour
+    regarding the -T argument.
+  * Upload to unstable.
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Mon, 26 Feb 2024 07:47:01 +0100
+
+xz-utils (5.5.2beta-1) experimental; urgency=medium
+
+  * Non-maintainer upload.
+  * Import 5.5.2beta
+  * Mark liblzma-doc multi-arch foreign.
+  * Update copyright file, most files are now under 0BSD.
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Thu, 15 Feb 2024 21:42:23 +0100
+
+xz-utils (5.5.1alpha-0.1) experimental; urgency=medium
+
+  * Non-maintainer upload.
+  * Import 5.5.1alpha.
+  * Add new symbol.
+
+ -- Sebastian Andrzej Siewior <sebastian@breakpoint.cc>  Wed, 31 Jan 2024 21:44:23 +0100
 
 xz-utils (5.4.5-0.2) unstable; urgency=medium
 
