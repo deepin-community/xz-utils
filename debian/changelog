@@ -1,3 +1,9 @@
+xz-utils (5.4.5-0.3deepin2) unstable; urgency=medium
+
+  * Rebuild with LTO enabled (dpkg vendor feature optimize/lto).
+
+ -- tunaichao <tunaichao@uniontech.com>  Mon, 14 Sep 2026 09:23:55 +0800
+
 xz-utils (5.4.5-0.3deepin1) unstable; urgency=medium
 
   * fix(cve): CVE-2026-34743
